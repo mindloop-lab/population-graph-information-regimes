@@ -1,4 +1,4 @@
-# population-graph-information-regime-audit
+# population-graph-information-regimes
 
 This repository accompanies **"Information regimes in population-graph neuroimaging: cohort
 context and implementation-dependent evaluation sensitivity"** (submission version RC4,
@@ -54,3 +54,11 @@ preselected split, never pooled. See `docs/REGIME_DEFINITIONS.md`.
 
 Code: GPL-3.0 (the controlled implementations wrap GPL-3.0 upstreams; see
 `THIRD_PARTY_NOTICES.md`). Upstreams are fetched by pinned commit and are not vendored here.
+
+## Citation
+
+Repository: <https://github.com/mindloop-lab/population-graph-information-regimes>
+
+Software archive (v1.0.0): DOI `10.5281/zenodo.23104123` — see `CITATION.cff`. Cite both the
+software record and the paper.
+

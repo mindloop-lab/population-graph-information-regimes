@@ -9,9 +9,9 @@
   "determinism": "no wall-clock value is written in the payload; rerun with the same inputs and compare payload_tree_sha256 (contract \u00a76, G-DET)",
   "files": [
     {
-      "bytes": 1315,
+      "bytes": 2860,
       "path": "CITATION.cff",
-      "sha256": "3c8b09059309c0e309595065780a02391e90faacb094b737dca622c87079d600",
+      "sha256": "8117a0a12512a2f6465286028881b26bbd904c5709ee0b080f5830da4f1b8a54",
       "source": "drafts:CITATION.cff"
     },
     {
@@ -27,9 +27,9 @@
       "source": "drafts:PUBLIC_FILESET.tsv"
     },
     {
-      "bytes": 3235,
+      "bytes": 3455,
       "path": "README.md",
-      "sha256": "b150a7b287c5ff37e2b1c0a6f2ba7ebe6ed1d9aa04254bee56ec5188b3939f35",
+      "sha256": "9a163460259ccc671b3c4385e02f0cfe4742224eb51a2170b8ea7428e31c084f",
       "source": "drafts:public_repo_README.md"
     },
     {
@@ -1303,7 +1303,7 @@
   },
   "generator": "build_public_release.py",
   "generator_version": "1.2",
-  "payload_tree_sha256": "c361c780a6e06f6eb2502c9bdd5aee71e6dcd21eedc53ed5a2e132b90241feb3",
+  "payload_tree_sha256": "0dfc0deece5da1113f57803f87c7bd6767f3bbaec859adb441f81c04a5bcddbf",
   "redactions": {
     "figures/FS2_loso_sensitivity_manifest.yaml": {
       "exported_sha256": "bab3526020e3ec7bb7bbbc409035d9a96dccc226f3a153f2385e9d4334368db9",

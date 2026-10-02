@@ -8,22 +8,59 @@ title: >-
   evaluation sensitivity"
 type: software
 authors:
-  # AUTHOR ACTION REQUIRED: author list and ORCIDs must match the manuscript title page
-  - name: "TODO: authors (A3 checklist item #7)"
+  - family-names: Chen
+    given-names: Zongqing
+    orcid: "https://orcid.org/0000-0002-1668-5089"
+    affiliation: >-
+      College of Artificial Intelligence and Advanced Interdisciplinary Sciences,
+      Chongqing Normal University; Chongqing Key Laboratory of Brain-Inspired
+      Cognitive Computing and Educational Rehabilitation for Children with Special
+      Needs, Chongqing Normal University
+  - family-names: Yu
+    given-names: Biantian
+    affiliation: School of Mathematical Sciences, Chongqing Normal University
+  - family-names: Wan
+    given-names: Keliang
+    affiliation: School of Mathematical Sciences, Chongqing Normal University
+  - family-names: Zhang
+    given-names: Qian
+    affiliation: >-
+      Department of Child Health Care, Children's Hospital of Chongqing Medical
+      University; National Clinical Research Center for Child Health and Disorders;
+      Ministry of Education Key Laboratory of Child Development and Disorders;
+      Chongqing Key Laboratory of Child Health and Nutrition
+  - family-names: Zhang
+    given-names: Fanghong
+    orcid: "https://orcid.org/0000-0003-0398-9902"
+    affiliation: National Center for Applied Mathematics, Chongqing Normal University
+  - family-names: Zhong
+    given-names: Ning
+    orcid: "https://orcid.org/0000-0001-7882-8340"
+    affiliation: Faculty of Engineering, Maebashi Institute of Technology
+  - family-names: Kuai
+    given-names: Hongzhi
+    orcid: "https://orcid.org/0000-0002-2746-648X"
+    affiliation: >-
+      School of Artificial Intelligence, Chongqing University of Posts and
+      Telecommunications; Chongqing Key Laboratory of Intelligence Health,
+      Chongqing University of Posts and Telecommunications
 version: 1.0.0
-# AUTHOR ACTION REQUIRED: identifiers.date-released and the DOI below are set at release time
-date-released: "TODO"
-identifiers:
-  - description: Zenodo version DOI for v1.0.0 (set when the release is published)
-    type: doi
-    value: "TODO"
-related-identifiers:
-  - description: manuscript (add preprint or journal DOI when available)
-    type: doi
-    relation: isSupplementTo
-    value: "TODO"
+date-released: "2026-10-02"
 license: GPL-3.0
-repository-code: "TODO: GitHub URL at release time"
+repository-code: "https://github.com/mindloop-lab/population-graph-information-regimes"
+identifiers:
+  - description: Zenodo version DOI for v1.0.0
+    type: doi
+    value: "10.5281/zenodo.23104123"
+keywords:
+  - population graph
+  - information regime
+  - cohort context
+  - evaluation sensitivity
+  - functional MRI
+  - multi-site neuroimaging
+  - autism spectrum disorder
+  - reproducibility
 abstract: >-
   Controlled evaluation-regime experiments for two population-graph
   implementations (EV-GCN, Parisot-GCN) on ABIDE-I: the P0/P1
