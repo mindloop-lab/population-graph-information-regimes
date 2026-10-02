@@ -1,0 +1,332 @@
+path	origin	license_basis	scientific_role	publish	status
+CITATION.cff	paperA authored	GPL-3.0 (project)	citation metadata (DOI filled at R4)	YES	confirmed
+LICENSE	standard text	GPL-3.0	license	YES	confirmed
+PUBLIC_FILESET.tsv	paperA authored	GPL-3.0 (project)	per-file origin/publish authority (this file)	YES	confirmed
+README.md	paperA authored	GPL-3.0 (project)	release orientation	YES	confirmed
+THIRD_PARTY_NOTICES.md	paperA authored	GPL-3.0 (project)	upstream license coverage	YES	confirmed
+audit/__init__.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/graph/__init__.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/graph/context.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/inference/__init__.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/inference/records.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/models/__init__.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/models/ev_gcn_adapter.py	modified EV_GCN upstream (GPL-3.0)	GPL-3.0	EV-GCN controlled adapter	YES	confirmed
+audit/models/lim_graph_cache.py	single_subject_popgnn-derived (NO-LICENSE upstream)	unresolved	Lim track (secondary campaign)	NO	confirmed
+audit/models/lim_ipgnn.py	single_subject_popgnn-derived (NO-LICENSE upstream)	unresolved	Lim track (secondary campaign)	NO	confirmed
+audit/models/parisot_adapter.py	modified population-gcn upstream (GPL-3.0)	GPL-3.0	Parisot-GCN controlled adapter	YES	confirmed
+audit/models/parisot_gcn.py	modified population-gcn upstream (GPL-3.0)	GPL-3.0	Parisot-GCN controlled adapter	YES	confirmed
+audit/protocols/__init__.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/protocols/firewall.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/protocols/spec.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/training/__init__.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+audit/training/checkpoint.py	paperA authored	GPL-3.0 (project)	controlled-evaluation core	YES	confirmed
+configs/data/abide1_legacy_matched.yaml	paperA authored	GPL-3.0 (project)	locked campaign/data configuration	YES	confirmed
+configs/study/core_audit.yaml	paperA authored	GPL-3.0 (project)	locked campaign/data configuration	YES	confirmed
+configs/study/locked_campaign_v1.yaml	paperA authored	GPL-3.0 (project)	locked campaign/data configuration	YES	confirmed
+docs/DATA_PREPARATION.md	paperA authored	GPL-3.0 (project)	ABIDE acquisition + upstream fetch guide	YES	confirmed
+docs/LOCKED_CAMPAIGN_V1.md	paperA authored	GPL-3.0 (project)	release material	YES	confirmed
+docs/OOF_PUBLIC_SCHEMA.tsv	paperA authored	GPL-3.0 (project)	OOF field minimization record	YES	confirmed
+docs/REGIME_DEFINITIONS.md	paperA authored	GPL-3.0 (project)	evaluation-regime taxonomy	YES	confirmed
+docs/REPORTING_CHECKLIST.md	paperA authored	GPL-3.0 (project)	release material	YES	confirmed
+docs/REPRODUCIBILITY.md	paperA authored	GPL-3.0 (project)	reproduction guide (3 levels)	YES	confirmed
+figures/F3_information_regime_schematic.svg	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/FS2_loso_sensitivity.pdf	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/FS2_loso_sensitivity.png	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/FS2_loso_sensitivity.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/FS2_loso_sensitivity.svg	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/FS2_loso_sensitivity_manifest.yaml	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig1_information_regimes.pdf	paperA authored	GPL-3.0 (project)	superseded figure variant	NO	confirmed
+figures/Fig1_information_regimes.png	paperA authored	GPL-3.0 (project)	superseded figure variant	NO	confirmed
+figures/Fig1_information_regimes.svg	paperA authored	GPL-3.0 (project)	superseded figure variant	NO	confirmed
+figures/Fig1_information_regimes_stacked.pdf	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig1_information_regimes_stacked.png	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig1_information_regimes_stacked.svg	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig2_primary_interaction.pdf	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig2_primary_interaction.png	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig2_primary_interaction.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig2_primary_interaction.svg	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/Fig2_primary_interaction_manifest.yaml	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/FigS1_evidence_reporting_chain.pdf	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/FigS1_evidence_reporting_chain.png	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/FigS1_evidence_reporting_chain.svg	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/FigS1_evidence_reporting_chain_stacked.pdf	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/FigS1_evidence_reporting_chain_stacked.png	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/FigS1_evidence_reporting_chain_stacked.svg	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/GA_PRODUCTION_BRIEF.md	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/GA_graphical_abstract.py	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/GA_graphical_abstract.svg	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/GA_graphical_abstract_manifest.yaml	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/_frozen_inputs.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/audit_layout.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/ga_points.json	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/ga_points.py	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/raster_concept_figures.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/render_drawio.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+figures/verify_F3_schematic.py	paperA authored	GPL-3.0 (project)	submission asset / historical evidence-chain graphic - not part of the paper's figure chain	NO	confirmed
+figures/verify_concept_figures.py	paperA authored	GPL-3.0 (project)	paper figure chain (script/artifact)	YES	confirmed
+frozen_results/COHORT_METADATA_FREEZE.yaml	paperA frozen record	project data (released alongside code)	frozen evidence backing the paper	YES	confirmed
+frozen_results/S1_FREEZE.yaml	paperA frozen record	project data (released alongside code)	frozen evidence backing the paper	YES	confirmed
+frozen_results/data_validation_cleanroom.json	paperA frozen record	project data (released alongside code)	frozen evidence backing the paper	YES	confirmed
+frozen_results/derived/condition_level_auc.csv	paperA frozen record (derived)	project data (released alongside code)	Table S1 source of truth	YES	confirmed
+frozen_results/derived/cross_split_primary.csv	paperA frozen record (derived)	project data (released alongside code)	Table 2 source of truth	YES	confirmed
+frozen_results/derived/seed_level_interactions.csv	paperA frozen record (derived)	project data (released alongside code)	Table S2 source of truth	YES	confirmed
+frozen_results/evgcn/ev_1024_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_0_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_0_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_1_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_1_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_1_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_2_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_2_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_2_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_3_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_3_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_3_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_4_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_4_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_1024_4_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_0_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_0_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_1_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_1_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_1_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_2_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_2_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_2_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_3_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_3_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_3_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_4_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_4_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2024_4_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_0_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_0_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_1_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_1_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_1_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_2_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_2_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_2_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_3_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_3_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_3_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_4_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_4_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_2025_4_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/ev_oc_registry_avg.csv	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/lim_statistics.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/smoke_1024_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/evgcn/smoke_registry.csv	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/oof/evgcn_p0/s1024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s1024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p0/s2024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s1024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/evgcn_p1/s2024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s1024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p0/s2024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s1024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f0_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f0_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f0_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f1_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f1_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f1_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f2_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f2_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f2_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f3_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f3_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f3_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f4_t11.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f4_t22.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/oof/parisot_p1/s2024_f4_t33.json	paperA frozen record (run M45S1-20260919-CODEX-R2)	project data (released alongside code)	per-subject out-of-fold predictions backing the primary campaign	YES	confirmed
+frozen_results/parisot/lim_statistics.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_0_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_0_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_1_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_1_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_1_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_2_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_2_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_2_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_3_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_3_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_3_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_4_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_4_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_1024_4_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_0_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_0_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_1_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_1_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_1_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_2_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_2_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_2_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_3_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_3_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_3_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_4_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_4_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2024_4_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_0_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_0_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_1_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_1_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_1_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_2_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_2_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_2_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_3_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_3_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_3_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_4_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_4_22.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_2025_4_33.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/pa_oc_registry_avg.csv	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/parisot/smoke_1024_0_11.json	paperA frozen record	project data (released alongside code)	legacy campaign cells (2025 reserve-run outputs, Lim/OC/smoke) - v1.1.0-full-audit material	NO	confirmed
+frozen_results/source_lock_verification_cleanroom.json	paperA frozen record	project data (released alongside code)	frozen evidence backing the paper	YES	confirmed
+manifests/CAMPAIGN_LOCK_V1.tsv	paperA authored	GPL-3.0 (project)	release material	YES	confirmed
+manifests/THIRD_PARTY_LOCK.tsv	paperA authored	GPL-3.0 (project)	release material	YES	confirmed
+model_cards/EV_GCN.md	paperA authored	GPL-3.0 (project)	implementation model card	YES	confirmed
+model_cards/LIM_IPGNN.md	paperA authored	GPL-3.0 (project)	secondary-campaign model card (out of v1 scope)	NO	confirmed
+model_cards/PARISOT_GCN.md	paperA authored	GPL-3.0 (project)	implementation model card	YES	confirmed
+model_cards/RF.md	paperA authored	GPL-3.0 (project)	secondary-campaign model card (out of v1 scope)	NO	confirmed
+pyproject.toml	paperA frozen record	project data (released alongside code)	frozen evidence backing the paper	YES	confirmed
+scripts/aggregate_evgcn.py	paperA authored	GPL-3.0 (project)	EV-GCN aggregation	YES	confirmed
+scripts/aggregate_evgcn_parisot_seed666_did.py	paperA authored	GPL-3.0 (project)	cross-implementation interaction (seed666)	YES	confirmed
+scripts/aggregate_parisot_regimes.py	paperA authored	GPL-3.0 (project)	Parisot-GCN aggregation	YES	confirmed
+scripts/analysis_v2.py	paperA authored	GPL-3.0 (project)	primary analysis layer	YES	confirmed
+scripts/evgcn_controlled.py	paperA authored	GPL-3.0 (project)	EV-GCN controlled wrapper	YES	confirmed
+scripts/evgcn_p0_controlled.py	paperA authored	GPL-3.0 (project)	EV-GCN P0 arm	YES	confirmed
+scripts/gen_tables_v2.py	paperA authored	GPL-3.0 (project)	table generation from frozen results	YES	confirmed
+scripts/generate_mixed_site_splits.py	paperA authored	GPL-3.0 (project)	preselected mixed-site split generation	YES	confirmed
+scripts/generate_splits.py	paperA authored	GPL-3.0 (project)	split construction	YES	confirmed
+scripts/parisot_controlled.py	paperA authored	GPL-3.0 (project)	Parisot-GCN controlled wrapper	YES	confirmed
+scripts/parisot_p0_controlled.py	paperA authored	GPL-3.0 (project)	Parisot-GCN P0 arm	YES	confirmed
+scripts/reproduce_fig2.py	paperA authored	GPL-3.0 (project)	G7b entry: Figure 2 numeric source	YES	confirmed
+scripts/reproduce_primary_results.py	paperA authored	GPL-3.0 (project)	reproduction entrypoint (G7)	YES	planned - Hermes delivers with the release
+scripts/reproduce_tables.py	paperA authored	GPL-3.0 (project)	G7b entry: tables from frozen	YES	confirmed
+scripts/run_evgcn_matrix.py	paperA authored	GPL-3.0 (project)	EV-GCN campaign runner	YES	confirmed
+scripts/run_parisot_matrix_v2.py	paperA authored	GPL-3.0 (project)	Parisot-GCN campaign runner	YES	confirmed
+scripts/validate_data.py	paperA authored	GPL-3.0 (project)	cohort/derivative validation	YES	confirmed
+scripts/validate_environment.py	paperA authored	GPL-3.0 (project)	environment check	YES	confirmed
+scripts/verify_ev_parity.py	paperA authored	GPL-3.0 (project)	EV-GCN wrapper/upstream parity	YES	confirmed
+scripts/verify_parisot_parity.py	paperA authored	GPL-3.0 (project)	Parisot wrapper/upstream parity	YES	confirmed
+scripts/verify_source_lock.py	paperA authored	GPL-3.0 (project)	upstream source-lock verification	YES	confirmed
+tests/test_checkpoint_selection.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_context.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_ev_gcn_adapter.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_firewalls.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_lim_adapter.py	paperA authored	GPL-3.0 (project)	Lim track test (secondary)	NO	confirmed
+tests/test_lim_graph_cache.py	paperA authored	GPL-3.0 (project)	Lim track test (secondary)	NO	confirmed
+tests/test_lim_inductive_cache.py	paperA authored	GPL-3.0 (project)	Lim track test (secondary)	NO	confirmed
+tests/test_lim_label_authorization.py	paperA authored	GPL-3.0 (project)	Lim track test (secondary)	NO	confirmed
+tests/test_lim_prepared_graph.py	paperA authored	GPL-3.0 (project)	Lim track test (secondary)	NO	confirmed
+tests/test_parisot_adapter.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_parisot_adapter_modern.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_protocol_spec.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+tests/test_records.py	paperA authored	GPL-3.0 (project)	protocol/adapter test	YES	confirmed
+uv.lock	paperA frozen record	project data (released alongside code)	frozen evidence backing the paper	YES	confirmed

@@ -1,0 +1,31 @@
+[project]
+name = "population-graph-audit"
+version = "0.1.0"
+description = "Controlled audit of information regimes in population-graph learning"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=1.26,<2",
+  "pandas>=2.3,<2.4",
+  "pyyaml>=6,<7",
+  "scikit-learn>=1.7,<1.8",
+  "scipy>=1.16,<1.17",
+  "torch==2.13.0",
+  "torch-geometric==2.8.0.post1",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4,<9",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

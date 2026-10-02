@@ -1,0 +1,17 @@
+column	needed_for_reproduction	public_source	release	reason
+experiment_id	yes	project-assigned identifier (released here)	YES	keys each controlled cell; no personal data
+model	yes	paper (EV-GCN, Parisot-GCN)	YES	required to group the interaction contrast
+track	yes	paper methods (Track A)	YES	separates controlled evaluation from released-code inspection
+regime	yes	paper methods (P0/P1)	YES	the intervention label; core to the estimand
+subject_id	yes	public ABIDE FILE_ID (PCP summary spreadsheet)	YES	public anonymized identifier; needed for exact-once query coverage checks and split verification
+site	yes	public ABIDE SITE_ID (PCP summary spreadsheet)	YES	needed for site-cluster bootstrap and leave-one-site-out sensitivity
+label	yes	public ABIDE phenotype (DX_GROUP)	YES	required to recompute AUC; already public per-subject in the PCP phenotypic file
+prediction	yes	derived here (model output)	YES	the per-subject out-of-fold score; re-deriving any aggregate requires it
+split_seed	yes	paper methods (666/1024/2024)	YES	replication-unit identity
+outer_fold	yes	paper methods	YES	fold-level pairing for the paired bootstrap
+train_seed	yes	paper methods (11/22/33)	YES	ensemble definition; ensemble vs single-seed separation
+context_size	yes	paper methods	YES	regime semantics for P0/P1 arms
+context_draw	yes	paper methods	YES	draw identity for context sampling; no P2 dose data in the primary campaign
+intervention	yes	paper methods	YES	regime arm label
+source_commit	yes	internal registry provenance	YES	execution identity of the producing code; commit hashes only, no content
+environment_hash	yes	internal registry provenance	YES	environment lock identity; a hash only

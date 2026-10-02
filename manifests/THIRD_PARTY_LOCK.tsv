@@ -1,0 +1,9 @@
+name	role	origin	commit	status	license
+population-gcn	core-static-population-graph	https://github.com/parisots/population-gcn.git	185e2f5d9745484b8c7994f80254740b9cbb7b75	clean	GPL-3.0
+EV_GCN	core-adaptive-population-graph	https://github.com/SamitHuang/EV_GCN.git	57363b85c56ee9d093976bda203ef62c237c985f	clean	GPL-3.0
+single_subject_popgnn	core-inductive-reference	https://github.com/98jaemin/single_subject_popgnn.git	3522c83cf2ac19a8488baeb444dadf57a62fc35a	clean	NO-LICENSE-FILE
+FC-HGNN_Pytorch	engineering-gated-extension	https://github.com/Guuuu11/FC-HGNN_Pytorch.git	e887e1b9e39287d5f3a52701437235df4249f0fa	clean	MIT
+BrainGNN_Pytorch	optional-individual-graph-control	https://github.com/xxlya/BrainGNN_Pytorch.git	1e337e7a13af5e4374343fda81ce11b62c5ce566	clean	NO-LICENSE-FILE
+fMRI-site-adaptation	optional-site-shift-control	https://github.com/kundaMwiza/fMRI-site-adaptation.git	0a70cf827192244fc8fadd818d5d7cf946d32096	clean	GPL-3.0
+LGMF-GNN	not-in-primary-matrix	https://github.com/ATP-BME/LGMF-GNN.git	98cf56c322404e4d1aa80ba24bef7568c8df4bbf	clean	MIT
+abide	data-provenance-only	https://github.com/preprocessed-connectomes-project/abide.git	fda1ec5d3f53eb97d94352e779f37c3ce46caee1	clean	NO-LICENSE-FILE

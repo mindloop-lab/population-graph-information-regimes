@@ -1,0 +1,17 @@
+dataset_id: abide1_legacy_matched_871
+root: data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched
+manifest: data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/cohort_manifest.csv
+subject_ids: data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/subject_IDs.txt
+subject_id_mapping: data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/subject_id_mapping.csv
+subjects_dir: data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/subjects
+pipeline: cpac
+strategy: filt_noglobal
+primary_atlas: cc200
+matrix_kind: correlation
+n_subjects: 871
+n_asd: 403
+n_td: 468
+n_sites: 20
+rejected_variants:
+  - data/curated/abide1_canonical_variants/magp_abide1_v1
+  - data/curated/abide1_canonical_variants/magp_abide1_v1_recovered_order

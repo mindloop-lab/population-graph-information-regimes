@@ -1,0 +1,1555 @@
+{
+  "status": "PASS",
+  "regime": "P0-A0",
+  "split_seed": 1024,
+  "fold": 1,
+  "train_seed": 11,
+  "n_fit": 613,
+  "n_validation": 87,
+  "n_query": 171,
+  "epochs": 110,
+  "best_val_auc": 0.49787910922587486,
+  "device": "cuda:1",
+  "elapsed_seconds": 60.7,
+  "rows": [
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50003",
+      "label": 1,
+      "site": "PITT",
+      "p_r0": 0.4432916
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50012",
+      "label": 1,
+      "site": "PITT",
+      "p_r0": 0.43919635
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50014",
+      "label": 1,
+      "site": "PITT",
+      "p_r0": 0.44960663
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50020",
+      "label": 1,
+      "site": "PITT",
+      "p_r0": 0.4421699
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50032",
+      "label": 0,
+      "site": "PITT",
+      "p_r0": 0.42658156
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50037",
+      "label": 0,
+      "site": "PITT",
+      "p_r0": 0.4405407
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50039",
+      "label": 0,
+      "site": "PITT",
+      "p_r0": 0.44678369
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50041",
+      "label": 0,
+      "site": "PITT",
+      "p_r0": 0.43292525
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50042",
+      "label": 0,
+      "site": "PITT",
+      "p_r0": 0.44596872
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50057",
+      "label": 1,
+      "site": "PITT",
+      "p_r0": 0.43680522
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50102",
+      "label": 0,
+      "site": "OLIN",
+      "p_r0": 0.44684523
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50104",
+      "label": 0,
+      "site": "OLIN",
+      "p_r0": 0.43728146
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50111",
+      "label": 0,
+      "site": "OLIN",
+      "p_r0": 0.44842815
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50119",
+      "label": 1,
+      "site": "OLIN",
+      "p_r0": 0.4422484
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50134",
+      "label": 1,
+      "site": "OLIN",
+      "p_r0": 0.44885379
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50145",
+      "label": 1,
+      "site": "OHSU",
+      "p_r0": 0.44836122
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50152",
+      "label": 1,
+      "site": "OHSU",
+      "p_r0": 0.44270733
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50168",
+      "label": 0,
+      "site": "OHSU",
+      "p_r0": 0.43830645
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50171",
+      "label": 0,
+      "site": "OHSU",
+      "p_r0": 0.43538639
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50190",
+      "label": 1,
+      "site": "SDSU",
+      "p_r0": 0.43984419
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50193",
+      "label": 0,
+      "site": "SDSU",
+      "p_r0": 0.42547947
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50208",
+      "label": 0,
+      "site": "SDSU",
+      "p_r0": 0.43847561
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50210",
+      "label": 0,
+      "site": "SDSU",
+      "p_r0": 0.43299267
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50217",
+      "label": 0,
+      "site": "SDSU",
+      "p_r0": 0.42876261
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50232",
+      "label": 1,
+      "site": "TRINITY",
+      "p_r0": 0.46030852
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50245",
+      "label": 1,
+      "site": "TRINITY",
+      "p_r0": 0.44982505
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50251",
+      "label": 1,
+      "site": "TRINITY",
+      "p_r0": 0.43559009
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50252",
+      "label": 1,
+      "site": "TRINITY",
+      "p_r0": 0.45193908
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50264",
+      "label": 0,
+      "site": "TRINITY",
+      "p_r0": 0.42779329
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50265",
+      "label": 0,
+      "site": "TRINITY",
+      "p_r0": 0.44124526
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50267",
+      "label": 0,
+      "site": "TRINITY",
+      "p_r0": 0.43662101
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50270",
+      "label": 0,
+      "site": "TRINITY",
+      "p_r0": 0.43949348
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50274",
+      "label": 1,
+      "site": "UM_1",
+      "p_r0": 0.44773397
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50284",
+      "label": 1,
+      "site": "UM_1",
+      "p_r0": 0.44089848
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50285",
+      "label": 1,
+      "site": "UM_1",
+      "p_r0": 0.43899435
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50287",
+      "label": 1,
+      "site": "UM_1",
+      "p_r0": 0.43480736
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50304",
+      "label": 1,
+      "site": "UM_1",
+      "p_r0": 0.45467311
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50324",
+      "label": 1,
+      "site": "UM_1",
+      "p_r0": 0.45674345
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50345",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.44317827
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50353",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.44037014
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50356",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.43421978
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50361",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.4235774
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50364",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.45899776
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50366",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.44165465
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50374",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.44764167
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50376",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.47564337
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50380",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.44431242
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50381",
+      "label": 0,
+      "site": "UM_1",
+      "p_r0": 0.45440975
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50385",
+      "label": 0,
+      "site": "UM_2",
+      "p_r0": 0.44259468
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50399",
+      "label": 1,
+      "site": "UM_2",
+      "p_r0": 0.44408306
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50404",
+      "label": 1,
+      "site": "UM_2",
+      "p_r0": 0.44488254
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50418",
+      "label": 0,
+      "site": "UM_2",
+      "p_r0": 0.43586397
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50424",
+      "label": 0,
+      "site": "UM_2",
+      "p_r0": 0.44252259
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50425",
+      "label": 0,
+      "site": "UM_2",
+      "p_r0": 0.43368793
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50436",
+      "label": 0,
+      "site": "USM",
+      "p_r0": 0.44502199
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50437",
+      "label": 0,
+      "site": "USM",
+      "p_r0": 0.45653069
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50441",
+      "label": 0,
+      "site": "USM",
+      "p_r0": 0.43712685
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50449",
+      "label": 0,
+      "site": "USM",
+      "p_r0": 0.44413745
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50469",
+      "label": 0,
+      "site": "USM",
+      "p_r0": 0.4324151
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50486",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.44114229
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50487",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.45318934
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50494",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.44753808
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50500",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.44954175
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50510",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.45591709
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50518",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.44836187
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50519",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.46342501
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50524",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.44854158
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50525",
+      "label": 1,
+      "site": "USM",
+      "p_r0": 0.44826406
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50552",
+      "label": 0,
+      "site": "YALE",
+      "p_r0": 0.42998129
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50569",
+      "label": 0,
+      "site": "YALE",
+      "p_r0": 0.44181728
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50572",
+      "label": 0,
+      "site": "YALE",
+      "p_r0": 0.44280908
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50607",
+      "label": 1,
+      "site": "YALE",
+      "p_r0": 0.44313088
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50608",
+      "label": 1,
+      "site": "YALE",
+      "p_r0": 0.4503006
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50620",
+      "label": 1,
+      "site": "YALE",
+      "p_r0": 0.45543319
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50626",
+      "label": 1,
+      "site": "YALE",
+      "p_r0": 0.44246492
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50649",
+      "label": 1,
+      "site": "CMU",
+      "p_r0": 0.45484877
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50665",
+      "label": 0,
+      "site": "CMU",
+      "p_r0": 0.44206449
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50691",
+      "label": 0,
+      "site": "LEUVEN_1",
+      "p_r0": 0.43318626
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50693",
+      "label": 1,
+      "site": "LEUVEN_1",
+      "p_r0": 0.44156015
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50701",
+      "label": 0,
+      "site": "LEUVEN_1",
+      "p_r0": 0.4402594
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50702",
+      "label": 1,
+      "site": "LEUVEN_1",
+      "p_r0": 0.46023896
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50707",
+      "label": 0,
+      "site": "LEUVEN_1",
+      "p_r0": 0.43543056
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50724",
+      "label": 0,
+      "site": "LEUVEN_2",
+      "p_r0": 0.4537825
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50726",
+      "label": 0,
+      "site": "LEUVEN_2",
+      "p_r0": 0.44320938
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50731",
+      "label": 0,
+      "site": "LEUVEN_2",
+      "p_r0": 0.44923511
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50748",
+      "label": 1,
+      "site": "LEUVEN_2",
+      "p_r0": 0.44401631
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50756",
+      "label": 1,
+      "site": "LEUVEN_2",
+      "p_r0": 0.4387674
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50774",
+      "label": 0,
+      "site": "KKI",
+      "p_r0": 0.44385108
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50792",
+      "label": 1,
+      "site": "KKI",
+      "p_r0": 0.44075325
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50797",
+      "label": 1,
+      "site": "KKI",
+      "p_r0": 0.43506059
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50800",
+      "label": 1,
+      "site": "KKI",
+      "p_r0": 0.44793046
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50812",
+      "label": 0,
+      "site": "KKI",
+      "p_r0": 0.4439311
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50816",
+      "label": 0,
+      "site": "KKI",
+      "p_r0": 0.43402371
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50822",
+      "label": 0,
+      "site": "KKI",
+      "p_r0": 0.43707919
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50954",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.45309415
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50956",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.45474049
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50966",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.44830847
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50967",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.44690418
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50978",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.44534361
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "50981",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.44917113
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51000",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.45108345
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51001",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.46898982
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51006",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.44585127
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51009",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.46739101
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51018",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.43156868
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51020",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.43722159
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51025",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.43418655
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51034",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.44082534
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51035",
+      "label": 1,
+      "site": "NYU",
+      "p_r0": 0.43665516
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51036",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.45692426
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51040",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44105834
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51041",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44142231
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51045",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43543407
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51053",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44075316
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51059",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43702358
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51072",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43585742
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51076",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.42241725
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51077",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43655849
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51079",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44590974
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51103",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44938323
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51104",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.4375079
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51105",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43388146
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51117",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44544086
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51126",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43568918
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51129",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43373862
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51134",
+      "label": 0,
+      "site": "TRINITY",
+      "p_r0": 0.45089164
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51148",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.4308123
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51149",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44452769
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51151",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.44350037
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51154",
+      "label": 0,
+      "site": "NYU",
+      "p_r0": 0.43425098
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51171",
+      "label": 1,
+      "site": "STANFORD",
+      "p_r0": 0.44820568
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51177",
+      "label": 1,
+      "site": "STANFORD",
+      "p_r0": 0.45251361
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51180",
+      "label": 0,
+      "site": "STANFORD",
+      "p_r0": 0.43261427
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51197",
+      "label": 0,
+      "site": "STANFORD",
+      "p_r0": 0.43750295
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51198",
+      "label": 0,
+      "site": "STANFORD",
+      "p_r0": 0.45019642
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51201",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.45027351
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51206",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.45146278
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51218",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.45074227
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51228",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.44696829
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51231",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.43464077
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51234",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.45191523
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51235",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.4444387
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51237",
+      "label": 1,
+      "site": "UCLA_1",
+      "p_r0": 0.4242838
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51250",
+      "label": 0,
+      "site": "UCLA_1",
+      "p_r0": 0.4399505
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51256",
+      "label": 0,
+      "site": "UCLA_1",
+      "p_r0": 0.45394036
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51265",
+      "label": 0,
+      "site": "UCLA_1",
+      "p_r0": 0.42936817
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51272",
+      "label": 0,
+      "site": "UCLA_1",
+      "p_r0": 0.43353918
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51279",
+      "label": 0,
+      "site": "UCLA_1",
+      "p_r0": 0.43880633
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51281",
+      "label": 0,
+      "site": "UCLA_1",
+      "p_r0": 0.43897235
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51292",
+      "label": 1,
+      "site": "UCLA_2",
+      "p_r0": 0.45953381
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51301",
+      "label": 1,
+      "site": "UCLA_2",
+      "p_r0": 0.44389832
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51302",
+      "label": 1,
+      "site": "UCLA_2",
+      "p_r0": 0.45667481
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51303",
+      "label": 0,
+      "site": "UCLA_2",
+      "p_r0": 0.4366591
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51307",
+      "label": 0,
+      "site": "UCLA_2",
+      "p_r0": 0.44785747
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51319",
+      "label": 1,
+      "site": "MAX_MUN",
+      "p_r0": 0.43018356
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51329",
+      "label": 1,
+      "site": "MAX_MUN",
+      "p_r0": 0.44514677
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51331",
+      "label": 1,
+      "site": "MAX_MUN",
+      "p_r0": 0.4453074
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51343",
+      "label": 0,
+      "site": "MAX_MUN",
+      "p_r0": 0.44114667
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51345",
+      "label": 0,
+      "site": "MAX_MUN",
+      "p_r0": 0.44615105
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51349",
+      "label": 1,
+      "site": "MAX_MUN",
+      "p_r0": 0.43314129
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51361",
+      "label": 0,
+      "site": "MAX_MUN",
+      "p_r0": 0.43581343
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51364",
+      "label": 0,
+      "site": "MAX_MUN",
+      "p_r0": 0.44405368
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51365",
+      "label": 0,
+      "site": "MAX_MUN",
+      "p_r0": 0.43526059
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51464",
+      "label": 1,
+      "site": "CALTECH",
+      "p_r0": 0.46350783
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51481",
+      "label": 0,
+      "site": "CALTECH",
+      "p_r0": 0.44624659
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51484",
+      "label": 0,
+      "site": "CALTECH",
+      "p_r0": 0.45164743
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51565",
+      "label": 0,
+      "site": "SBL",
+      "p_r0": 0.44948748
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51568",
+      "label": 0,
+      "site": "SBL",
+      "p_r0": 0.43764359
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51570",
+      "label": 0,
+      "site": "SBL",
+      "p_r0": 0.43931773
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51578",
+      "label": 1,
+      "site": "SBL",
+      "p_r0": 0.46040148
+    },
+    {
+      "model": "evgcn",
+      "regime": "P0-A0",
+      "split_seed": 1024,
+      "subject_id": "51582",
+      "label": 1,
+      "site": "SBL",
+      "p_r0": 0.44026053
+    }
+  ]
+}

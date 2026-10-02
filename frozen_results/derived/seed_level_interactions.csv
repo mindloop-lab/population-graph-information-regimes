@@ -1,0 +1,13 @@
+split,evidence_stage,training_seed,interaction,direction,derived_from_sign,value_role
+666,frozen_prior_audit_M4.4R,11,+0.10251,positive,true,supporting
+666,frozen_prior_audit_M4.4R,22,+0.05251,positive,true,supporting
+666,frozen_prior_audit_M4.4R,33,+0.09418,positive,true,supporting
+666,frozen_prior_audit_M4.4R,three_seed_ensemble,+0.13090,positive,true,supporting
+1024,M4.5-S1,11,+0.02182,positive,true,supporting
+1024,M4.5-S1,22,+0.06936,positive,true,supporting
+1024,M4.5-S1,33,+0.03126,positive,true,supporting
+1024,M4.5-S1,three_seed_ensemble,+0.06285,positive,true,supporting
+2024,M4.5-S1,11,+0.05956,positive,true,supporting
+2024,M4.5-S1,22,+0.13826,positive,true,supporting
+2024,M4.5-S1,33,+0.10957,positive,true,supporting
+2024,M4.5-S1,three_seed_ensemble,+0.11967,positive,true,supporting

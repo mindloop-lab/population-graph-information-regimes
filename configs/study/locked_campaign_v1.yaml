@@ -1,0 +1,74 @@
+lock_version: 1
+lock_date: 2026-09-07
+study_id: population_graph_information_regime_audit_v1
+
+data:
+  registry: splits/mixed_site_dx_5fold_v2.csv
+  atlas: cc200
+  split_seeds: [1024, 2024, 2025]
+  outer_folds: [0, 1, 2, 3, 4]
+  train_seeds: [11, 22, 33]
+
+protocol:
+  fit_labels: F_only
+  checkpoint_labels: V_only
+  validation_context: F_plus_single_v
+  query_labels_available_during_inference: false
+  primary_contrast: [R1-C, R2-Q]
+  shared_checkpoint_required: true
+
+training:
+  maximum_epochs: 400
+  validation_epochs:
+    first: 1
+    every: 5
+    always_include_final: true
+  checkpoint_metric: validation_auc
+  checkpoint_tie_break: earliest_epoch
+  early_stopping:
+    patience_validation_checks: 20
+    minimum_improvement: 0.0
+  threshold_selection:
+    source: query_isolated_validation
+    criterion: maximum_youden_j
+    tie_break: closest_to_0.5_then_lower
+  no_refit_after_selection: true
+
+lim_ipgnn:
+  learning_rate: 0.001
+  weight_decay: 0.00005
+  hidden_dim_gnn: 16
+  num_layers: 4
+  dropout: 0.3
+  global_edge_threshold: 1.1
+  hidden_dim_edge: 128
+  edge_dropout: 0.2
+  phenotype_features: [SITE_ID, SEX]
+  primary_normalization: cohort_dependent_native
+  sensitivity_normalization: frozen_from_F
+
+parisot_gcn:
+  model: gcn_cheby
+  learning_rate: 0.005
+  maximum_degree: 3
+  hidden: 16
+  dropout: 0.3
+  weight_decay: 0.0005
+  selected_features: 2000
+  phenotype_features: [SEX, SITE_ID]
+
+statistics:
+  primary_endpoint: CIS
+  cis_sesoi_absolute_probability: 0.01
+  bootstrap_replicates: 5000
+  bootstrap_primary: two_stage_site_subject
+  bootstrap_sensitivity: paired_subject
+  confidence_level: 0.95
+  multiple_testing: holm
+  families:
+    - regime_effects
+    - architecture_interactions
+    - site_context_effects
+  aggregate_training_seeds_before_subject_inference: true
+  aggregate_context_draws_before_subject_inference: true
+

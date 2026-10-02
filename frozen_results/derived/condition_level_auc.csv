@@ -1,0 +1,13 @@
+split,evidence_stage,model,regime,ensemble_auc,availability,value_role
+666,frozen_prior_audit_M4.4R,EV-GCN,P0,,NOT_PRESENT_IN_FROZEN_SOURCE,not_available
+666,frozen_prior_audit_M4.4R,EV-GCN,P1,,NOT_PRESENT_IN_FROZEN_SOURCE,not_available
+666,frozen_prior_audit_M4.4R,Parisot,P0,,NOT_PRESENT_IN_FROZEN_SOURCE,not_available
+666,frozen_prior_audit_M4.4R,Parisot,P1,,NOT_PRESENT_IN_FROZEN_SOURCE,not_available
+1024,M4.5-S1,EV-GCN,P0,0.60408,present,supporting
+1024,M4.5-S1,EV-GCN,P1,0.56293,present,supporting
+1024,M4.5-S1,Parisot,P0,0.63423,present,supporting
+1024,M4.5-S1,Parisot,P1,0.65593,present,supporting
+2024,M4.5-S1,EV-GCN,P0,0.66400,present,supporting
+2024,M4.5-S1,EV-GCN,P1,0.57886,present,supporting
+2024,M4.5-S1,Parisot,P0,0.66392,present,supporting
+2024,M4.5-S1,Parisot,P1,0.69846,present,supporting

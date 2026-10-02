@@ -1,0 +1,44 @@
+{
+  "atlases_checked": [
+    "aal",
+    "cc200",
+    "ho"
+  ],
+  "errors": [],
+  "hashes": {
+    "cohort_manifest.csv": "77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d",
+    "subject_IDs.txt": "7cb85ff412ed55532c04d6576dba04a8a7dd73206f351c0bf0aae09dc01a16a5",
+    "subject_id_mapping.csv": "e578366749b16586eb52a30e215d2706881c8c2cb5a4ac4072d5827fb26e20b9"
+  },
+  "label_counts_raw": {
+    "1": 403,
+    "2": 468
+  },
+  "matrices_checked": 2613,
+  "n_sites": 20,
+  "n_subjects": 871,
+  "root": "<site-root>/data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched",
+  "site_counts": {
+    "CALTECH": 15,
+    "CMU": 11,
+    "KKI": 33,
+    "LEUVEN_1": 28,
+    "LEUVEN_2": 28,
+    "MAX_MUN": 46,
+    "NYU": 172,
+    "OHSU": 25,
+    "OLIN": 28,
+    "PITT": 50,
+    "SBL": 26,
+    "SDSU": 27,
+    "STANFORD": 25,
+    "TRINITY": 44,
+    "UCLA_1": 64,
+    "UCLA_2": 21,
+    "UM_1": 86,
+    "UM_2": 34,
+    "USM": 67,
+    "YALE": 41
+  },
+  "status": "PASS"
+}

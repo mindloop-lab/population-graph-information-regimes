@@ -1,0 +1,4 @@
+split,evidence_stage,delta_delta_auc,subject_bootstrap_ci95,site_cluster_ci95,leave_one_site_out_range,loso_note,project_decision_status,value_role,claim_scope
+666,frozen_prior_audit_M4.4R,+0.13090,"[0.08212, 0.18055]","[0.08829, 0.17056]",0.12274–0.13923,(prior audit),PASS_WITHIN_THREE_PRESELECTED_SPLITS,primary,three_preselected_splits_only
+1024,M4.5-S1,+0.06285,"[0.00182, 0.12322]","[0.02530, 0.09984]",0.05358–0.07002,,PASS_WITHIN_THREE_PRESELECTED_SPLITS,primary,three_preselected_splits_only
+2024,M4.5-S1,+0.11967,"[0.07237, 0.16538]","[0.07350, 0.16453]",0.10689–0.12951,,PASS_WITHIN_THREE_PRESELECTED_SPLITS,primary,three_preselected_splits_only

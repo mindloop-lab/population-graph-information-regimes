@@ -1,0 +1,83 @@
+figure: Fig2_primary_interaction
+prompt: F2 (Paper A figure generation)
+generated: '2026-09-27'
+numeric_authority: S1_FREEZE.yaml -> H3 derived CSVs; no value read from prose, none
+  typed by hand
+inputs:
+  S1_FREEZE.yaml: f3089bc0be2ff914a0400ef25c70ace43bd0b1685878f836aa79b1868718f82c
+  H3_MANIFEST.yaml: 9f9d8ed3b542d26157a3613f27ef536a199fc04a8a182342004fd93ec52d4f86
+  COHORT_METADATA_FREEZE.yaml: a87eb4fe64c1142b1491295ea0cf1d8b90e3496d1dd267357f3b1580ead134a6
+  derived/cross_split_primary.csv: c145c99c9f73a32a6e4e3f4b3a13c0cbe513897db9faec3950d9f3da5c174517
+  derived/seed_level_interactions.csv: 3dd78efc999fb4add823eb355fad837d82de6a3e77da028f7b8bbf8e2411412d
+  derived/condition_level_auc.csv: 3797794ef8bc5971ee1a59aeeef5ea843324c46af31797f96c547b84b20e0efa
+  derived/sensitivity_summary.csv: 7c697a85174857c3192ef9fdde7a6a71eecbc3fa43ae37a1ff92271be45213af
+recorded_by:
+  PROJECT_STATE.yaml:
+    S1_FREEZE.yaml: f3089bc0be2ff914a0400ef25c70ace43bd0b1685878f836aa79b1868718f82c
+    H3_MANIFEST.yaml: 9f9d8ed3b542d26157a3613f27ef536a199fc04a8a182342004fd93ec52d4f86
+    COHORT_METADATA_FREEZE.yaml: a87eb4fe64c1142b1491295ea0cf1d8b90e3496d1dd267357f3b1580ead134a6
+  SOURCE_REGISTRY.yaml:
+    S1_FREEZE.yaml: f3089bc0be2ff914a0400ef25c70ace43bd0b1685878f836aa79b1868718f82c
+    H3_MANIFEST.yaml: 9f9d8ed3b542d26157a3613f27ef536a199fc04a8a182342004fd93ec52d4f86
+    COHORT_METADATA_FREEZE.yaml: a87eb4fe64c1142b1491295ea0cf1d8b90e3496d1dd267357f3b1580ead134a6
+script:
+  path: figures/Fig2_primary_interaction.py
+  sha256: 058ac753b7ffdf3c5d7c52f9d1d7e1bd83fc87ecf34edd12698c0ad1c45eb53a
+command: cd <repo-root> && .venv-figures/bin/python figures/Fig2_primary_interaction.py
+outputs:
+  Fig2_primary_interaction.pdf: 10b115d10fdf7d87a35382ed6e16e3213505b3f79be24508a6980702e6aeefdf
+  Fig2_primary_interaction.svg: ec0d8e121044d0c2ca7ea4093817ed3f88f3c9852fea0999442290e1fe9694a0
+  Fig2_primary_interaction.png: 8d0a7ec86f9e3971ffd79d56976683f81018314816eba6aeba571ad4bac9ce98
+environment:
+  python: 3.12.13
+  matplotlib: 3.11.2
+  platform: Linux-7.0.0-30-generic-x86_64-with-glibc2.43
+validation:
+  checks: 22 PASS, 0 FAIL
+  condition_level_trajectories:
+    present: 4
+    points: 8
+    unsupported: split 666, NOT_PRESENT_IN_FROZEN_SOURCE
+    note: the prompt text says 'exactly 6 condition-level paired trajectories' and
+      then describes four trajectories / 8 points; the frozen source contains four
+      present trajectories (2 architectures x 2 splits) and four unsupported 666 rows,
+      so four is drawn and six is the count of trajectory slots that would exist if
+      666 carried condition-level values
+  strings_rendered_as_numbers: 29
+  canonical_texts_available: 40
+pairing_rule: combination / group-mean, not one-to-one subject pairing
+labels:
+  split_labels_in_figure:
+    '666': 666 (prior audit)
+    '1024': 1024 (M4.5-S1)
+    '2024': 2024 (M4.5-S1)
+  labels_recorded_in_the_freeze:
+  - 666 (frozen M4.4R)
+  - '1024'
+  - '2024'
+  note: the figure label '666 (prior audit)' renders the freeze's evidence stage (frozen_prior_audit_M4.4R)
+    and its recorded note '(prior audit)'
+placement:
+  natural_size_in:
+  - 5.74
+  - 6.21
+  manuscript_text_width_in: 5.42
+  placement: width=\textwidth
+  resulting_scale: 0.94
+  smallest_label_pt_on_page: 6.11
+  measured_at: figure rendered at 600 dpi; sizes derived from the PNG pixel dimensions
+  note: at a 90 mm half-width placement the smallest type would fall to 4.0 pt, so
+    this figure must be placed at full text width, or its panels separated, rather
+    than set as a half-width float
+style:
+  vector:
+  - pdf
+  - svg
+  preview: png 600 dpi
+  palette: Okabe-Ito subset
+  encoding_redundancy: panel B is faceted by split (the facet carries the split, so
+    nothing encodes it); within a facet the implementation is carried by colour, with
+    line style and marker shape redundant for grayscale; subject vs site interval
+    by weight and vertical offset
+  no_3d: true
+  no_gradients: true

@@ -1,0 +1,62 @@
+figure: FS2_loso_sensitivity
+prompt: FS2 (supplemental LOSO sensitivity plot)
+generated: '2026-09-27'
+numeric_authority: S1_FREEZE.yaml -> H3 derived CSVs (sensitivity_summary.csv for
+  the ranges, cross_split_primary.csv for the reference points)
+inputs:
+  S1_FREEZE.yaml: f3089bc0be2ff914a0400ef25c70ace43bd0b1685878f836aa79b1868718f82c
+  H3_MANIFEST.yaml: 9f9d8ed3b542d26157a3613f27ef536a199fc04a8a182342004fd93ec52d4f86
+  COHORT_METADATA_FREEZE.yaml: a87eb4fe64c1142b1491295ea0cf1d8b90e3496d1dd267357f3b1580ead134a6
+  derived/cross_split_primary.csv: c145c99c9f73a32a6e4e3f4b3a13c0cbe513897db9faec3950d9f3da5c174517
+  derived/seed_level_interactions.csv: 3dd78efc999fb4add823eb355fad837d82de6a3e77da028f7b8bbf8e2411412d
+  derived/condition_level_auc.csv: 3797794ef8bc5971ee1a59aeeef5ea843324c46af31797f96c547b84b20e0efa
+  derived/sensitivity_summary.csv: 7c697a85174857c3192ef9fdde7a6a71eecbc3fa43ae37a1ff92271be45213af
+script:
+  path: figures/FS2_loso_sensitivity.py
+  sha256: 51e70152dda14656736815723b2fa6d01aedc51f7e95458642fe825611323341
+shared_module:
+  path: figures/_frozen_inputs.py
+  sha256: 4651934105d7ee308b94d0ced79c19f3c10743f9eec3ac887a3c7b5456330bf1
+command: cd <repo-root> && .venv-figures/bin/python figures/FS2_loso_sensitivity.py
+outputs:
+  FS2_loso_sensitivity.pdf: c0bd691b1d919e0407fcccdae8865e4d4581b062dd8005432a674d0d606b9c2b
+  FS2_loso_sensitivity.svg: 0a784cea8ba441e220fa2eaa8b36a46689b5b4abaa9f832ed6c45c50d2ebf3c1
+  FS2_loso_sensitivity.png: 2c379460a124a6ba8e443236cf142ed9aea4fc9b74842354006a33a7acb4953c
+environment:
+  python: 3.12.13
+  matplotlib: 3.11.2
+  platform: Linux-7.0.0-30-generic-x86_64-with-glibc2.43
+validation:
+  checks: 11 PASS, 0 FAIL
+  ranges:
+    '1024':
+    - 0.05358
+    - 0.07002
+    '2024':
+    - 0.10689
+    - 0.12951
+    '666':
+    - 0.12274
+    - 0.13923
+  reference_points:
+    '1024': '+0.06285'
+    '2024': '+0.11967'
+    '666': '+0.13090'
+  pairing_rule: each split shown separately; no pooling and no cross-split summary
+    statistic is computed or drawn
+placement:
+  natural_size_in:
+  - 6.62
+  - 2.68
+  manuscript_text_width_in: 5.42
+  resulting_scale: 0.819
+  smallest_label_pt_on_page: 5.73
+style:
+  vector:
+  - pdf
+  - svg
+  preview: png 600 dpi
+  interval_encoding: thick line with end caps for the range, black diamond for the
+    reference point, 0 reference line drawn
+  no_3d: true
+  no_gradients: true

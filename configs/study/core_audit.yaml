@@ -1,0 +1,30 @@
+study_id: population_graph_information_regime_audit_v1
+primary_split_registry: splits/mixed_site_dx_5fold_v2.csv
+loso_split_registry: splits/loso_20site_v1.csv
+dataset: abide1_legacy_matched_871
+core_models:
+  - rf
+  - parisot_gcn
+  - ev_gcn
+  - lim_ipgnn
+extension_models:
+  - fc_hgnn
+held_out_confirmation_models:
+  - magp_ahgnn
+outer_folds: 5
+split_seeds: [1024, 2024, 2025]
+train_seeds: [11, 22, 33]
+smoke:
+  split_seed: 1024
+  train_seed: 11
+  fold: 0
+protocols: [R0-T, R1-C, R2-Q]
+primary_protocol_contrast: [R1-C, R2-Q]
+context_sizes: [0, 1, 3, 7, 15, 31, all_minus_1]
+context_draws: 20
+primary_scientific_endpoint: CIS
+key_performance_endpoint: delta_auc
+multiple_testing_families:
+  - regime_effects
+  - architecture_interactions
+  - site_context_effects

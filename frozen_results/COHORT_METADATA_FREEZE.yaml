@@ -1,0 +1,129 @@
+artifact: COHORT_METADATA_FREEZE.yaml
+generated_by: paperA-control/scripts/close_cohort_metadata.py
+generated_on: '2026-09-27'
+role: canonical source for dataset-level facts (as opposed to result numbers, which
+  live in S1_FREEZE.yaml)
+identity_chain:
+  lock_of_record:
+    path: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+    cohort:
+      canonical_variant: magp_abide1_v1_legacy_matched
+      n_subjects: 871
+      n_sites: 20
+      manifest_sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+      subject_ids_sha256: 7cb85ff412ed55532c04d6576dba04a8a7dd73206f351c0bf0aae09dc01a16a5
+      split_registry: splits/mixed_site_dx_5fold_v2.csv
+      split_registry_sha256: d7d2a28cbc2fc97a90c7801dd5b8a2fcd084a1f694261b7a9a359583389af22d
+      feature_data_sha256: 6452f63c3ffb399b5f55ea2387c139d7dd08b5440c65b13a2ea69f25d61fbf2a
+      site_map_sha256: 7b2b1a74abf1cd3a5c30bfadd3686273e56e5a6f6cb31b351ee7188c56d19cc0
+  pointer_table:
+    path: manifests/DATA_LOCK.tsv
+    sha256: e817cb73836148c9edf64ff94fb98b90cba6bdb4c73b268fbee22319bf0b8dae
+    rows:
+    - artifact: cohort_manifest
+      path: <site-root>/data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/cohort_manifest.csv
+      sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+      matches_pointer_table: true
+      pointer_path_basename: cohort_manifest.csv
+    - artifact: subject_ids
+      path: <site-root>/data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/subject_IDs.txt
+      sha256: 7cb85ff412ed55532c04d6576dba04a8a7dd73206f351c0bf0aae09dc01a16a5
+      matches_pointer_table: true
+      pointer_path_basename: subject_IDs.txt
+    - artifact: subject_id_mapping
+      path: <site-root>/data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/subject_id_mapping.csv
+      sha256: e578366749b16586eb52a30e215d2706881c8c2cb5a4ac4072d5827fb26e20b9
+      matches_pointer_table: true
+      pointer_path_basename: subject_id_mapping.csv
+    - artifact: canonical_summary
+      path: <site-root>/data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/canonical_summary.json
+      sha256: b4da9fab821a89a69b93403d0a2b01d88f261deb64c415666a1acee3976db0b5
+      matches_pointer_table: true
+      pointer_path_basename: canonical_summary.json
+  lock_checks:
+    manifest_sha256:
+      file: cohort_manifest.csv
+      sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+      declared: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+      matches_lock: true
+    subject_ids_sha256:
+      file: subject_IDs.txt
+      sha256: 7cb85ff412ed55532c04d6576dba04a8a7dd73206f351c0bf0aae09dc01a16a5
+      declared: 7cb85ff412ed55532c04d6576dba04a8a7dd73206f351c0bf0aae09dc01a16a5
+      matches_lock: true
+  repository_head: e47b1cb5a676c1e64e7e31ff4df5a414a9e51293
+  artifact_host_root: <site-root>/2609-wan/paperA/cleanroom/population-graph-information-regime-audit
+values:
+- name: n_subjects
+  value: 871
+  canonical_text: '871'
+  role: cohort size (already reported in the manuscript)
+  source:
+    file: metadata/cohort_manifest.csv
+    sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+    quote: row count of the manifest
+- name: n_sites
+  value: 20
+  canonical_text: '20'
+  role: acquisition site count (already reported in the manuscript)
+  source:
+    file: metadata/cohort_manifest.csv
+    sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+    quote: distinct SITE_ID values
+- name: n_asd
+  value: 403
+  canonical_text: '403'
+  role: diagnostic-group count (previously unreported)
+  source:
+    file: metadata/cohort_manifest.csv
+    sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+    quote: 'DX_GROUP column counts {''1'': 403, ''2'': 468}; code 1 = autism'
+- name: n_td
+  value: 468
+  canonical_text: '468'
+  role: diagnostic-group count (previously unreported)
+  source:
+    file: metadata/cohort_manifest.csv
+    sha256: 77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d
+    quote: 'DX_GROUP column counts {''1'': 403, ''2'': 468}; code 2 = control'
+- name: feature_dimensionality
+  value: 19900
+  canonical_text: '19900'
+  role: exact feature dimensionality (previously unreported)
+  source:
+    file: metadata/canonical_summary.json + extractor code
+    sha256: b4da9fab821a89a69b93403d0a2b01d88f261deb64c415666a1acee3976db0b5
+    quote: atlas_shapes['cc200'] = [200, 200]; strict upper-triangle of a 200x200
+      correlation matrix
+label_mapping:
+  dx_group:
+    '1': ASD
+    '2': TD
+  counts:
+    '1': 403
+    '2': 468
+  sex_counts:
+    '1': 727
+    '2': 144
+  external_coding:
+    source: 'ABIDE-I phenotype coding (DX_GROUP: 1 = autism, 2 = control; SEX: 1 =
+      male, 2 = female)'
+    where: ABIDE/FCP-INDI phenotype documentation, as reported by independent redistributions
+      of the ABIDE phenotype table
+    corroboration: SEX counts in the same manifest (727 male / 144 female) follow
+      the same coding direction
+cross_checks_not_provenance:
+  counts_sum_equals_cohort_size: true
+  dimensionality_matches_atlas_arithmetic: true
+  note: the same pair of counts can be assigned to the two groups in either order
+    while still summing to the cohort size, so identity, not arithmetic, decides;
+    the direction is fixed by the ABIDE coding recorded above and corroborated by
+    the SEX counts following the same coding
+verification:
+  date: '2026-09-27'
+  method: read-only artifact fetch from the artifact host, hash-verified against the
+    lock of record; identity and mapping recorded, not inferred
+not_verified_here:
+- the .mat matrices themselves were shape-checked on the artifact host at the locked
+  commit (correlation, 200x200, strict upper triangle = 19900); the raw imaging data
+  were not copied

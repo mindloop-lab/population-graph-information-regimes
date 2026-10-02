@@ -1,0 +1,508 @@
+schema_version: 1
+artifact: PaperA_M45S1_CANONICAL_FREEZE
+created: 2026-09-27
+created_by_phase: H2
+freeze_status: FROZEN
+
+decision:
+  status:
+    value: "PASS_WITHIN_THREE_PRESELECTED_SPLITS"
+    canonical_text: "PASS_WITHIN_THREE_PRESELECTED_SPLITS"
+    role: primary
+    source:
+      file: paperA-260919-v5/S1_FINAL_RESULTS.md
+      line: 3
+      quote: "Status: `PASS_WITHIN_THREE_PRESELECTED_SPLITS`; 120/120 cells completed and independently audited. This is not a claim of robustness to arbitrary splits."
+    note: "scope sentence in the same line: '120/120 cells completed and independently audited. This is not a claim of robustness to arbitrary splits.'"
+  run_status:
+    value: "COMPLETED"
+    canonical_text: "COMPLETED"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 3
+      quote: "status: COMPLETED"
+  run_stage:
+    value: "M4.5-S1-cross-split"
+    canonical_text: "M4.5-S1-cross-split"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 2
+      quote: "stage: M4.5-S1-cross-split"
+
+scope:
+  cohort_variant:
+    value: "magp_abide1_v1_legacy_matched"
+    canonical_text: "magp_abide1_v1_legacy_matched"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 12
+      quote: "canonical_variant: magp_abide1_v1_legacy_matched"
+  n_subjects:
+    value: 871
+    canonical_text: "871"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 13
+      quote: "n_subjects: 871"
+  n_sites:
+    value: 20
+    canonical_text: "20"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 14
+      quote: "n_sites: 20"
+  selected_splits:
+    value: [666, 1024, 2024]
+    role: primary
+    derivation: >
+      666 is the frozen M4.4R split (prior audit); 1024 and 2024 come from
+      lock selected_splits; the frozen results table reports all three.
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 9
+      quote: "selected_splits: [1024, 2024]"
+  reserve_split:
+    id: 2025
+    value: null
+    canonical_text: "NOT_RUN"
+    run_state: NOT_RUN
+    status: DERIVED_FROM_LOCK_ABSENCE
+    role: scope_lock
+    derivation: >
+      No frozen document contains the literal string NOT_RUN. The state is
+      derived, not quoted: 2025 is absent from lock selected_splits and from
+      the results table, it is listed only as reserve_split, and the executed
+      matrix totals 120 cells over two splits. Recorded as derived.
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 10
+      quote: "reserve_split: [2025]"
+  total_cells:
+    value: 120
+    canonical_text: "120"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 30
+      quote: "total_cells: 120"
+  completed_cells:
+    value: 120
+    canonical_text: "120"
+    role: supporting
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 5
+      quote: "completed_cells: 120"
+  not_measured_in_s1: "query-context/P2 and the historical 723-subject mechanism campaign were not part of S1"
+
+primary_results:
+  split_666:
+    label: "666 (frozen M4.4R)"
+    delta_delta_auc:
+      value: 0.13090
+      canonical_text: "+0.13090"
+      role: primary
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 13
+        quote: "| 666 (frozen M4.4R) | +0.13090 | [0.08212, 0.18055] | [0.08829, 0.17056] | 0.12274–0.13923 (prior audit) |"
+      note: "estimand: (AUC_EV_P0 - AUC_EV_P1) - (AUC_Parisot_P0 - AUC_Parisot_P1); three-seed probability ensemble; identical to supporting_results.seed_level_interactions.split_666.ensemble_three_seed"
+    subject_bootstrap_ci95:
+      value: [0.08212, 0.18055]
+      canonical_text: "[0.08212, 0.18055]"
+      role: primary
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 13
+        quote: "| 666 (frozen M4.4R) | +0.13090 | [0.08212, 0.18055] | [0.08829, 0.17056] | 0.12274–0.13923 (prior audit) |"
+    site_cluster_ci95:
+      value: [0.08829, 0.17056]
+      canonical_text: "[0.08829, 0.17056]"
+      role: supporting
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 13
+        quote: "| 666 (frozen M4.4R) | +0.13090 | [0.08212, 0.18055] | [0.08829, 0.17056] | 0.12274–0.13923 (prior audit) |"
+    leave_one_site_out_range:
+      value: [0.12274, 0.13923]
+      canonical_text: "0.12274–0.13923"
+      role: sensitivity
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 13
+        quote: "| 666 (frozen M4.4R) | +0.13090 | [0.08212, 0.18055] | [0.08829, 0.17056] | 0.12274–0.13923 (prior audit) |"
+      note: "(prior audit)"
+  split_1024:
+    label: "1024"
+    delta_delta_auc:
+      value: 0.06285
+      canonical_text: "+0.06285"
+      role: primary
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 14
+        quote: "| 1024 | +0.06285 | [0.00182, 0.12322] | [0.02530, 0.09984] | 0.05358–0.07002 |"
+      note: "estimand: (AUC_EV_P0 - AUC_EV_P1) - (AUC_Parisot_P0 - AUC_Parisot_P1); three-seed probability ensemble; identical to supporting_results.seed_level_interactions.split_1024.ensemble_three_seed"
+    subject_bootstrap_ci95:
+      value: [0.00182, 0.12322]
+      canonical_text: "[0.00182, 0.12322]"
+      role: primary
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 14
+        quote: "| 1024 | +0.06285 | [0.00182, 0.12322] | [0.02530, 0.09984] | 0.05358–0.07002 |"
+    site_cluster_ci95:
+      value: [0.02530, 0.09984]
+      canonical_text: "[0.02530, 0.09984]"
+      role: supporting
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 14
+        quote: "| 1024 | +0.06285 | [0.00182, 0.12322] | [0.02530, 0.09984] | 0.05358–0.07002 |"
+    leave_one_site_out_range:
+      value: [0.05358, 0.07002]
+      canonical_text: "0.05358–0.07002"
+      role: sensitivity
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 14
+        quote: "| 1024 | +0.06285 | [0.00182, 0.12322] | [0.02530, 0.09984] | 0.05358–0.07002 |"
+  split_2024:
+    label: "2024"
+    delta_delta_auc:
+      value: 0.11967
+      canonical_text: "+0.11967"
+      role: primary
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 15
+        quote: "| 2024 | +0.11967 | [0.07237, 0.16538] | [0.07350, 0.16453] | 0.10689–0.12951 |"
+      note: "estimand: (AUC_EV_P0 - AUC_EV_P1) - (AUC_Parisot_P0 - AUC_Parisot_P1); three-seed probability ensemble; identical to supporting_results.seed_level_interactions.split_2024.ensemble_three_seed"
+    subject_bootstrap_ci95:
+      value: [0.07237, 0.16538]
+      canonical_text: "[0.07237, 0.16538]"
+      role: primary
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 15
+        quote: "| 2024 | +0.11967 | [0.07237, 0.16538] | [0.07350, 0.16453] | 0.10689–0.12951 |"
+    site_cluster_ci95:
+      value: [0.07350, 0.16453]
+      canonical_text: "[0.07350, 0.16453]"
+      role: supporting
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 15
+        quote: "| 2024 | +0.11967 | [0.07237, 0.16538] | [0.07350, 0.16453] | 0.10689–0.12951 |"
+    leave_one_site_out_range:
+      value: [0.10689, 0.12951]
+      canonical_text: "0.10689–0.12951"
+      role: sensitivity
+      source:
+        file: paperA-260919-v5/S1_FINAL_RESULTS.md
+        line: 15
+        quote: "| 2024 | +0.11967 | [0.07237, 0.16538] | [0.07350, 0.16453] | 0.10689–0.12951 |"
+
+supporting_results:
+  seed_level_interactions:
+    role: supporting
+    aggregation_rule: "mean the three per-subject probabilities within each condition, then compute AUC; not the arithmetic mean of the seed-specific interaction AUCs"
+    split_666:
+      seed_11:
+        value: 0.10251
+        canonical_text: "+0.10251"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 23
+          quote: "| 666 | +0.10251 | +0.05251 | +0.09418 | +0.13090 |"
+      seed_22:
+        value: 0.05251
+        canonical_text: "+0.05251"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 23
+          quote: "| 666 | +0.10251 | +0.05251 | +0.09418 | +0.13090 |"
+      seed_33:
+        value: 0.09418
+        canonical_text: "+0.09418"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 23
+          quote: "| 666 | +0.10251 | +0.05251 | +0.09418 | +0.13090 |"
+      ensemble_three_seed:
+        value: 0.13090
+        canonical_text: "+0.13090"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 23
+          quote: "| 666 | +0.10251 | +0.05251 | +0.09418 | +0.13090 |"
+    split_1024:
+      seed_11:
+        value: 0.02182
+        canonical_text: "+0.02182"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 24
+          quote: "| 1024 | +0.02182 | +0.06936 | +0.03126 | +0.06285 |"
+      seed_22:
+        value: 0.06936
+        canonical_text: "+0.06936"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 24
+          quote: "| 1024 | +0.02182 | +0.06936 | +0.03126 | +0.06285 |"
+      seed_33:
+        value: 0.03126
+        canonical_text: "+0.03126"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 24
+          quote: "| 1024 | +0.02182 | +0.06936 | +0.03126 | +0.06285 |"
+      ensemble_three_seed:
+        value: 0.06285
+        canonical_text: "+0.06285"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 24
+          quote: "| 1024 | +0.02182 | +0.06936 | +0.03126 | +0.06285 |"
+    split_2024:
+      seed_11:
+        value: 0.05956
+        canonical_text: "+0.05956"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 25
+          quote: "| 2024 | +0.05956 | +0.13826 | +0.10957 | +0.11967 |"
+      seed_22:
+        value: 0.13826
+        canonical_text: "+0.13826"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 25
+          quote: "| 2024 | +0.05956 | +0.13826 | +0.10957 | +0.11967 |"
+      seed_33:
+        value: 0.10957
+        canonical_text: "+0.10957"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 25
+          quote: "| 2024 | +0.05956 | +0.13826 | +0.10957 | +0.11967 |"
+      ensemble_three_seed:
+        value: 0.11967
+        canonical_text: "+0.11967"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 25
+          quote: "| 2024 | +0.05956 | +0.13826 | +0.10957 | +0.11967 |"
+  ensemble_auc_by_condition:
+    role: supporting
+    note: "the frozen results table reports ensemble AUC only for splits 1024 and 2024; no value exists for split 666 and none was inferred"
+    split_1024:
+      ev_gcn_p0:
+        value: 0.60408
+        canonical_text: "0.60408"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 33
+          quote: "| 1024 | 0.60408 | 0.56293 | 0.63423 | 0.65593 |"
+      ev_gcn_p1:
+        value: 0.56293
+        canonical_text: "0.56293"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 33
+          quote: "| 1024 | 0.60408 | 0.56293 | 0.63423 | 0.65593 |"
+      parisot_p0:
+        value: 0.63423
+        canonical_text: "0.63423"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 33
+          quote: "| 1024 | 0.60408 | 0.56293 | 0.63423 | 0.65593 |"
+      parisot_p1:
+        value: 0.65593
+        canonical_text: "0.65593"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 33
+          quote: "| 1024 | 0.60408 | 0.56293 | 0.63423 | 0.65593 |"
+    split_2024:
+      ev_gcn_p0:
+        value: 0.66400
+        canonical_text: "0.66400"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 34
+          quote: "| 2024 | 0.66400 | 0.57886 | 0.66392 | 0.69846 |"
+      ev_gcn_p1:
+        value: 0.57886
+        canonical_text: "0.57886"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 34
+          quote: "| 2024 | 0.66400 | 0.57886 | 0.66392 | 0.69846 |"
+      parisot_p0:
+        value: 0.66392
+        canonical_text: "0.66392"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 34
+          quote: "| 2024 | 0.66400 | 0.57886 | 0.66392 | 0.69846 |"
+      parisot_p1:
+        value: 0.69846
+        canonical_text: "0.69846"
+        role: supporting
+        source:
+          file: paperA-260919-v5/S1_FINAL_RESULTS.md
+          line: 34
+          quote: "| 2024 | 0.66400 | 0.57886 | 0.66392 | 0.69846 |"
+  not_present_in_frozen_source:
+    - field: ensemble_auc_by_condition.split_666
+      value: null
+      status: NOT_PRESENT_IN_FROZEN_SOURCE
+    - field: query_context_p2_interaction
+      value: null
+      status: NOT_PRESENT_IN_FROZEN_SOURCE
+      note: P2 was not part of S1
+
+interpretation:
+  verbatim: true
+  allowed:
+    - text: "The direction is consistent across three preselected outer splits, while effect magnitude differs (0.06285–0.13090)."
+      verbatim: true
+      source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 38}
+  forbidden:
+    - text: "It does not establish invariance to arbitrary splits, nor isolate neural architecture from model-specific graph operators."
+      verbatim: true
+      source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 38}
+    - text: "Historical 723-subject mechanisms remain a separate campaign."
+      verbatim: true
+      source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 38}
+    - text: "Query-context/P2 was not part of S1."
+      verbatim: true
+      source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 38}
+    - text: "This is not a claim of robustness to arbitrary splits."
+      verbatim: true
+      source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 3}
+    - text: "so they are not pooled as independent observations and bootstrap replicates are not combined."
+      verbatim: true
+      source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 17}
+  scope_source:
+    file: paperA-260919-v5/S1_FINAL_RESULTS.md
+    line: 38
+    quote: "The direction is consistent across three preselected outer splits, while effect magnitude differs (0.06285–0.13090). This supports the limited statement that the controlled EV-GCN "
+
+locks:
+  abide_ii:
+    value: "LOCKED"
+    canonical_text: "LOCKED"
+    role: gate
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 55
+      quote: "abide_ii: LOCKED"
+  fc_hgnn:
+    value: "HOLD_PROVENANCE_REVIEW"
+    canonical_text: "HOLD_PROVENANCE_REVIEW"
+    role: gate
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 54
+      quote: "fc_hgnn: HOLD_PROVENANCE_REVIEW"
+  split_2025:
+    value: null
+    canonical_text: "NOT_RUN"
+    role: gate
+    status: DERIVED_FROM_LOCK_ABSENCE
+    source:
+      file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+      line: 10
+      quote: "reserve_split: [2025]"
+
+provenance:
+  run_id:
+    value: "M45S1-20260919-CODEX-R2"
+    source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 42}
+  result_file_sha256:
+    value: "8e02799359a2e2862785bd63502f6c45241f3ce4d02a95502f8d15e7dba337b3"
+    source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 47}
+  environment_freeze_sha256:
+    value: "bf07b890fc41a26b9a6f5b42e68857a43fae032630fc76a6ae44bbe6aa860d8c"
+    source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 49}
+  source_tree_sha256:
+    value: "cbd69e09e8a2a1367b202a2f8205748a11134d84d75e8d066a9464572d40dbea"
+    source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 50}
+  lock_split_registry:
+    value: "d7d2a28cbc2fc97a90c7801dd5b8a2fcd084a1f694261b7a9a359583389af22d"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 18}
+  lock_feature_data:
+    value: "6452f63c3ffb399b5f55ea2387c139d7dd08b5440c65b13a2ea69f25d61fbf2a"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 19}
+  lock_site_map:
+    value: "7b2b1a74abf1cd3a5c30bfadd3686273e56e5a6f6cb31b351ee7188c56d19cc0"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 20}
+  lock_repository_head:
+    value: "e47b1cb5a676c1e64e7e31ff4df5a414a9e51293"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 22}
+  lock_source_tree:
+    value: "cbd69e09e8a2a1367b202a2f8205748a11134d84d75e8d066a9464572d40dbea"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 23}
+  lock_environment_freeze:
+    value: "bf07b890fc41a26b9a6f5b42e68857a43fae032630fc76a6ae44bbe6aa860d8c"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 24}
+  wall_time_minutes:
+    value: 183.4
+    canonical_text: "approximately 183.4 minutes. No historical outputs were overwritten"
+    role: supporting
+    source: {file: paperA-260919-v5/S1_FINAL_RESULTS.md, line: 51}
+  device:
+    value: "cuda:1"
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 51}
+  bootstrap:
+    subject_bootstrap_replicates: 10000
+    site_cluster_bootstrap_replicates: 10000
+    paired_indices_across_models_and_regimes: true
+    combine_splits_as_independent_subjects: false
+    source: {file: paperA-260919-v5/S1_EXECUTION_LOCK.yaml, line: 45}
+
+source_authority:
+  result_authority:
+    tier: canonical_frozen_documents
+    status: VERIFIED
+  remote_artifact_reverification:
+    status: PENDING
+    reason: <host>_OFFLINE
+    checked_utc: 2026-09-27T10:43:17Z
+    effect_on_result_authority: none
+
+inputs:
+  - path: paperA-260919-v5/S1_FINAL_RESULTS.md
+    sha256: 087166d5b060be8a0fb29d7c8b065d76e4166ce72624cc66e3db18eaef39a17c
+  - path: paperA-260919-v5/S1_EXECUTION_LOCK.yaml
+    sha256: 7b749acf2eb699ce7f80a8b0af5615442be6c70e9890a3df941df14dfd981ec2
+  - path: paperA-260919-v5/PROVENANCE_TRACE_AND_DECISION.md
+    sha256: b624df8a6b10f0e4721bbfc03b0715dae0de97d2a5432e6a6eae55da85b9e168

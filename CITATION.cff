@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code or the frozen results, please cite both the software
+  (this record) and the paper.
+title: >-
+  Code and reproducibility materials for "Information regimes in
+  population-graph neuroimaging: cohort context and implementation-dependent
+  evaluation sensitivity"
+type: software
+authors:
+  # AUTHOR ACTION REQUIRED: author list and ORCIDs must match the manuscript title page
+  - name: "TODO: authors (A3 checklist item #7)"
+version: 1.0.0
+# AUTHOR ACTION REQUIRED: identifiers.date-released and the DOI below are set at release time
+date-released: "TODO"
+identifiers:
+  - description: Zenodo version DOI for v1.0.0 (set when the release is published)
+    type: doi
+    value: "TODO"
+related-identifiers:
+  - description: manuscript (add preprint or journal DOI when available)
+    type: doi
+    relation: isSupplementTo
+    value: "TODO"
+license: GPL-3.0
+repository-code: "TODO: GitHub URL at release time"
+abstract: >-
+  Controlled evaluation-regime experiments for two population-graph
+  implementations (EV-GCN, Parisot-GCN) on ABIDE-I: the P0/P1
+  training-time cohort-visibility intervention on three preselected outer
+  splits, with the frozen results, per-subject out-of-fold registry and
+  deterministic reproduction scripts. Data are not redistributed.
