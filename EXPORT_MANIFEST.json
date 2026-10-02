@@ -1,10 +1,10 @@
 {
-  "allowlist_entries": 50,
+  "allowlist_entries": 49,
   "cleanroom_clean": true,
   "cleanroom_head": "c4a58b33a7496a10aa65877b8926edb87b10f518",
   "cleanroom_head_pinned": "c4a58b33a7496a10aa65877b8926edb87b10f518",
   "contract": "PUBLIC_RELEASE_CONTRACT.md",
-  "contract_sha256": "6dda8bbb6d7a2bc43e1933ba8c42a855d645dd0dcb8d93cd97a503958ae394ee",
+  "contract_sha256": "ef7b29bca2f401a20186da747198a5f955093d41062f625e8b9278a7bb349d76",
   "control_freeze_dir": "public-release-handoff-260930",
   "determinism": "no wall-clock value is written in the payload; rerun with the same inputs and compare payload_tree_sha256 (contract \u00a76, G-DET)",
   "files": [
@@ -163,12 +163,6 @@
       "path": "docs/REGIME_DEFINITIONS.md",
       "sha256": "6405af28b36be1671d30db45247de3c901aad6cd01a38a619958ca3908179560",
       "source": "drafts:public_repo_docs/REGIME_DEFINITIONS.md"
-    },
-    {
-      "bytes": 5322,
-      "path": "docs/REPORTING_CHECKLIST.md",
-      "sha256": "1f3573d93074be7ea154b3a8e25789171aae2e2818d4678c86c126e3c869e88d",
-      "source": "cleanroom:docs/REPORTING_CHECKLIST.md"
     },
     {
       "bytes": 5322,
@@ -1308,7 +1302,7 @@
     "G6b": "PASS"
   },
   "generator": "build_public_release.py",
-  "generator_version": "1.1",
+  "generator_version": "1.2",
   "payload_tree_sha256": "c361c780a6e06f6eb2502c9bdd5aee71e6dcd21eedc53ed5a2e132b90241feb3",
   "redactions": {
     "figures/FS2_loso_sensitivity_manifest.yaml": {
