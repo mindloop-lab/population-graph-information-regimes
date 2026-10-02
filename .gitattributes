@@ -1,0 +1,4 @@
+# Preserve exact bytes for this data/reproducibility release.
+# Without this, core.autocrlf=input rewrites CRLF files on checkout and the
+# frozen SHA256SUMS verification (G7a/G8) fails on a fresh clone.
+* -text
