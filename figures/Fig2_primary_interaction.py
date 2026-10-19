@@ -95,7 +95,7 @@ def canonical_texts(node, acc=None):
 primary = rows("cross_split_primary.csv")
 seeds = rows("seed_level_interactions.csv")
 cond = rows("condition_level_auc.csv")
-sens = rows("sensitivity_summary.csv")
+sens = FROZEN.sensitivity  # derived from S1_FREEZE.yaml when the CSV is not shipped
 
 # ---- validation battery, before anything is drawn -------------------------------
 fails: list[str] = []
@@ -420,8 +420,10 @@ manifest = {
     "generated": "2026-09-27",
     "numeric_authority": "S1_FREEZE.yaml -> H3 derived CSVs; no value read from prose, none typed by hand",
     "inputs": inputs,
-    "recorded_by": {"PROJECT_STATE.yaml": {k: v[0] for k, v in recorded.items()},
-                    "SOURCE_REGISTRY.yaml": {k: v[1] for k, v in recorded.items()}},
+    "recorded_by": (
+        {"PROJECT_STATE.yaml": {k: v[0] for k, v in recorded.items()},
+         "SOURCE_REGISTRY.yaml": {k: v[1] for k, v in recorded.items()}}
+        if recorded else {"frozen_results/SHA256SUMS": dict(inputs)}),
     "script": {"path": "figures/Fig2_primary_interaction.py",
                "sha256": sha(Path(__file__).resolve())},
     "command": "python3 figures/Fig2_primary_interaction.py  (run from the repository root; pinned artifacts were rendered from this source)",

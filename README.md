@@ -5,14 +5,14 @@ context and implementation-dependent evaluation sensitivity"**.
 
 Manuscript versions and dates: the first public release (tag `v1.0.0`, commit `b83ad83`)
 accompanied manuscript **RC4 (2026-09-30)**. The revision prepared here supports manuscript
-**RC5.3 (2026-10-19)** and is not yet released. The manuscript was submitted to bioRxiv on
+**RC5.5 (2026-10-19)** and is not yet released. The manuscript was submitted to bioRxiv on
 **2 October 2026** and first posted on **8 October 2026** (DOI
 `10.64898/2026.10.02.756253`, CC-BY 4.0).
 
 | manuscript | date | this repository |
 |---|---|---|
 | RC4 | 2026-09-30 | tag `v1.0.0`, commit `b83ad83` |
-| RC5.3 | 2026-10-19 | this revision; release pending author approval |
+| RC5.5 | 2026-10-19 | this revision; release pending author approval |
 
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
@@ -39,6 +39,13 @@ canonical text in `S1_FREEZE.yaml`; any mismatch fails the run. Split 666 predat
 extension runs and carries no per-subject record; its interaction is carried by the frozen
 record and is cross-checked, not recomputed. Full campaign reruns are available through
 the controlled runner scripts documented below.
+
+The figure generators (`figures/Fig2_primary_interaction.py`,
+`figures/FS2_loso_sensitivity.py`) read the same frozen inputs and also run from a public
+checkout: with no `paperA-control/` present they verify against `frozen_results/SHA256SUMS`
+instead. Running them rewrites the figure PDF/SVG/PNG in place and prints a validation
+summary. `figures/verify_concept_figures.py` additionally needs the manuscript sources and
+skips itself in a public checkout.
 
 ## Layout
 

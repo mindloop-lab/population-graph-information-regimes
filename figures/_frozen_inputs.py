@@ -6,9 +6,17 @@ what "the frozen inputs" are. Reading happens only through this module:
 
     S1_FREEZE.yaml  ->  H3 derived CSVs (deterministically generated from it)
 
-Every recorded SHA-256 is checked against the file on disk and against the other record
-that pins it; a mismatch raises instead of returning data. Nothing is read from manuscript
-prose and no result value is ever typed by hand.
+Two verification modes, chosen by what is present:
+
+  * internal control tree (`paperA-control/` present): every input is pinned twice, in
+    PROJECT_STATE.yaml and in SOURCE_REGISTRY.yaml, and the two records must agree;
+  * public checkout (no `paperA-control/`): inputs are verified against
+    `frozen_results/SHA256SUMS`, the only pin shipped publicly. Governance checks that need
+    the control plane stay internal and are not reproduced here.
+
+Every recorded SHA-256 is checked against the file on disk and against the record that pins
+it; a mismatch raises instead of returning data. Nothing is read from manuscript prose and
+no result value is ever typed by hand.
 """
 from __future__ import annotations
 
@@ -85,7 +93,15 @@ class FrozenInputs:
 
     def __init__(self, base: Path):
         self.base = Path(base)
-        cp = self.base / "paperA-control"
+        control = self.base / "paperA-control"
+        if control.is_dir():
+            self._load_with_control(control)
+        else:
+            # public checkouts ship only frozen_results/: verify against its SHA256SUMS instead of
+            # the private double-pinned control plane. The governance checks stay internal.
+            self._load_from_frozen_results(self.base / "frozen_results")
+
+    def _load_with_control(self, cp: Path) -> None:
         der = cp / "derived"
         ps = yaml.safe_load((cp / "PROJECT_STATE.yaml").read_text(encoding="utf-8"))
         sr = yaml.safe_load((cp / "SOURCE_REGISTRY.yaml").read_text(encoding="utf-8"))
@@ -128,8 +144,50 @@ class FrozenInputs:
             self.csv_paths[entry["path"]] = p
             self.inputs[f"derived/{entry['path']}"] = entry["sha256"]
 
+        self.mode = "internal"
         self.recorded = recorded
         self.freeze = yaml.safe_load((cp / "S1_FREEZE.yaml").read_text(encoding="utf-8"))
+        self.canonical = set(canonical_texts(self.freeze))
+        self.selected = [str(s) for s in self.freeze["scope"]["selected_splits"]["value"]]
+
+    def _load_from_frozen_results(self, fr: Path) -> None:
+        sums_path = fr / "SHA256SUMS"
+        if not sums_path.is_file():
+            raise FrozenInputError(
+                f"neither paperA-control/ nor {sums_path} is present: cannot verify the frozen inputs")
+        sums: dict[str, str] = {}
+        for line in sums_path.read_text(encoding="utf-8").splitlines():
+            digest, _, rel = line.strip().partition("  ")
+            if digest and rel:
+                sums[rel.strip()] = digest.strip()
+
+        def pinned(rel: str) -> str:
+            path = fr / rel
+            if not path.is_file():
+                raise FrozenInputError(f"missing public frozen input: {rel}")
+            got = sha(path)
+            want = sums.get(rel)
+            if want is None:
+                raise FrozenInputError(f"{rel} is not listed in frozen_results/SHA256SUMS")
+            if got != want:
+                raise FrozenInputError(
+                    f"{rel} hash {got[:16]}… does not match SHA256SUMS {want[:16]}…")
+            return got
+
+        self.mode = "public"
+        self.recorded = {}
+        self.inputs: dict[str, str] = {}
+        self.csv_paths: dict[str, Path] = {}
+        for rel in ("S1_FREEZE.yaml", "COHORT_METADATA_FREEZE.yaml"):
+            self.inputs[rel] = pinned(rel)
+        for name in ("cross_split_primary.csv", "seed_level_interactions.csv",
+                     "condition_level_auc.csv", "sensitivity_summary.csv"):
+            rel = f"derived/{name}"
+            if (fr / rel).is_file():
+                self.inputs[rel] = pinned(rel)
+                self.csv_paths[name] = fr / rel
+
+        self.freeze = yaml.safe_load((fr / "S1_FREEZE.yaml").read_text(encoding="utf-8"))
         self.canonical = set(canonical_texts(self.freeze))
         self.selected = [str(s) for s in self.freeze["scope"]["selected_splits"]["value"]]
 
@@ -151,7 +209,19 @@ class FrozenInputs:
 
     @property
     def sensitivity(self) -> list[dict]:
-        return self.rows("sensitivity_summary.csv")
+        if "sensitivity_summary.csv" in self.csv_paths:
+            return self.rows("sensitivity_summary.csv")
+        # public checkouts do not ship the derived sensitivity table; the same ranges are
+        # canonical values inside S1_FREEZE.yaml, which is hash-verified above
+        rows = []
+        for key, node in (self.freeze.get("primary_results") or {}).items():
+            rng = node.get("leave_one_site_out_range")
+            if not rng:
+                continue
+            rows.append({"split": str(key).removeprefix("split_"),
+                         "leave_one_site_out_range": rng["canonical_text"],
+                         "value_role": rng.get("role", "sensitivity")})
+        return rows
 
     def tokens(self) -> set[str]:
         """Every individual number that appears inside a frozen canonical text.

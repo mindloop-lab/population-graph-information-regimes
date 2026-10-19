@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Paper A — supplemental LOSO sensitivity plot (prompt FS2).
+"""Paper A — supplemental site-omission sensitivity plot (prompt FS2).
 
 One horizontal range per preselected split: the stored leave-one-site-out interaction
 range, with the split's main ΔΔAUC point overlaid for reference. It is a sensitivity range,
@@ -32,7 +32,7 @@ from _frozen_inputs import FrozenInputError, FrozenInputs, sha  # noqa: E402
 BASE = Path(__file__).resolve().parents[1]
 FIGDIR = BASE / "figures"
 FORBIDDEN = ("mean", "pooled", "meta", "average across splits", "confidence interval")
-STAGE_LABEL = {"666": "666 (prior audit)", "1024": "1024 (M4.5-S1)", "2024": "2024 (M4.5-S1)"}
+STAGE_LABEL = {"666": "Split 1 (666, earlier audit)", "1024": "Split 2 (1024)", "2024": "Split 3 (2024)"}
 
 try:
     F = FrozenInputs(BASE)
@@ -55,7 +55,7 @@ def check(ok: bool, label: str, detail: str = "") -> None:
 prim = {r["split"]: r for r in F.primary}
 sens = {r["split"]: r for r in F.sensitivity}
 
-check(len(sens) == 3, "exactly three LOSO ranges", f"{len(sens)} rows: {sorted(sens)}")
+check(len(sens) == 3, "exactly three site-omission ranges", f"{len(sens)} rows: {sorted(sens)}")
 check(all(s in sens for s in ("666", "1024", "2024")),
       "the three preselected splits are present", ", ".join(sorted(sens)))
 
@@ -63,10 +63,10 @@ parsed: dict[str, tuple[float, float]] = {}
 for split, r in sens.items():
     m = re.fullmatch(r"\s*([0-9.]+)[–-]([0-9.]+)\s*", r["leave_one_site_out_range"])
     if not m:
-        check(False, f"split {split}: LOSO range parses", r["leave_one_site_out_range"])
+        check(False, f"split {split}: site-omission range parses", r["leave_one_site_out_range"])
         continue
     parsed[split] = (float(m.group(1)), float(m.group(2)))
-check(len(parsed) == 3, "every LOSO range parses as a low–high pair",
+check(len(parsed) == 3, "every site-omission range parses as a low–high pair",
       ", ".join(f"{k}: {v[0]}–{v[1]}" for k, v in sorted(parsed.items())))
 check(all(lo < hi for lo, hi in parsed.values()), "every range has low < high")
 
@@ -74,7 +74,7 @@ inside = []
 for split, (lo, hi) in parsed.items():
     pt = float(prim[split]["delta_delta_auc"])
     inside.append(lo <= pt <= hi)
-check(all(inside), "each split's main ΔΔAUC point lies inside its LOSO range",
+check(all(inside), "each split's main ΔΔAUC point lies inside its site-omission range",
       ", ".join(f"{s}: {prim[s]['delta_delta_auc']} in [{parsed[s][0]}, {parsed[s][1]}]"
                 for s in sorted(parsed)))
 
@@ -83,7 +83,7 @@ agree = all(sens[s]["leave_one_site_out_range"].strip()
             in prim[s]["leave_one_site_out_range"].strip()
             or prim[s]["leave_one_site_out_range"].strip()
             in sens[s]["leave_one_site_out_range"].strip() for s in parsed)
-check(agree, "the two frozen records carry the same LOSO range per split")
+check(agree, "the two frozen records carry the same site-omission range per split")
 
 # stage wording: 666 comes from the prior audit, 1024/2024 from M4.5-S1
 check(prim["666"]["evidence_stage"] == "frozen_prior_audit_M4.4R"
@@ -167,7 +167,7 @@ check(not unaccounted, "every numeric string on the page is a frozen value or an
 check(all(STAGE_LABEL[s] in joined for s in ys), "all three stage labels are printed")
 range_strings = [sens[s]["leave_one_site_out_range"].strip() for s in ys]
 check(all(t in joined for t in range_strings),
-      "every LOSO range is printed as its frozen canonical text",
+      "every site-omission range is printed as its frozen canonical text",
       "; ".join(range_strings))
 
 if fails:
@@ -179,10 +179,14 @@ with Image.open(FIGDIR / "FS2_loso_sensitivity.png") as im:
 scale = 5.42 / natural[0]
 manifest = {
     "figure": "FS2_loso_sensitivity",
-    "prompt": "FS2 (supplemental LOSO sensitivity plot)",
+    "prompt": "FS2 (supplemental site-omission sensitivity plot)",
     "generated": "2026-09-27",
-    "numeric_authority": "S1_FREEZE.yaml -> H3 derived CSVs (sensitivity_summary.csv for the "
-                         "ranges, cross_split_primary.csv for the reference points)",
+    "numeric_authority": "S1_FREEZE.yaml, plus the derived tables when a control checkout ships "
+                         "them (sensitivity_summary.csv for the ranges, cross_split_primary.csv for "
+                         "the reference points); a public checkout reads the same ranges from the "
+                         "hash-verified freeze record",
+    "split_labels": {s: STAGE_LABEL[s] for s in ("666", "1024", "2024")},
+    "split_provenance": {s: prim[s]["evidence_stage"] for s in ("666", "1024", "2024")},
     "inputs": F.inputs,
     "script": {"path": "figures/FS2_loso_sensitivity.py", "sha256": sha(Path(__file__).resolve())},
     "shared_module": {"path": "figures/_frozen_inputs.py",
@@ -192,7 +196,9 @@ manifest = {
                      "and the legend was moved from lower-right to upper-left. The previously shipped PDF "
                      "shows the legend at upper-left although this script said 'lower right', so the shipped "
                      "artwork and the script were not in agreement; regeneration now matches the shipped layout. "
-                     "No value, range or axis scale changed.",
+                     "261019: the row labels now read Split 1/2/3 with the split id kept, and the internal run "
+                     "code (M4.5-S1) is replaced by the descriptive provenance 'earlier audit' on Split 1; the "
+                     "mapping is recorded in split_labels and split_provenance. No value, range or axis scale changed.",
     "outputs": {o: sha(FIGDIR / o) for o in ("FS2_loso_sensitivity.pdf", "FS2_loso_sensitivity.svg",
                                              "FS2_loso_sensitivity.png")},
     "environment": {"python": platform.python_version(), "matplotlib": matplotlib.__version__,
