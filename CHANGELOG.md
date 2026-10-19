@@ -48,15 +48,16 @@ recomputed, and nothing in `frozen_results/` changed.
 - `CITATION.cff`: added `preferred-citation` pointing at the preprint DOI; the software version
   and the Zenodo v1.0.0 DOI are unchanged until the release is cut.
 
-### Known issue (release blocker, not fixed here)
+### Figure 2 (stale script replaced)
 
-- `figures/Fig2_primary_interaction.pdf` in this tree (`10b115d1…`, 413.9 × 447.4 pt) renders with
-  text collisions under the current matplotlib: the panel-A subtitle over the x-axis title, the two
-  panel-B x-axis labels over each other, the "three-seed ensemble" legend over its values, and the
-  panel-B note over panel C's axis text. The script's 22 checks pass because the overlap check
-  compares baselines, not text bounding boxes. The manuscript ships a different, clean build
-  (`6ec9598…`, 375.9 × 446.9 pt) that the current script does not reproduce in this environment.
-  Do not release until this is fixed (fix the check or pin the matplotlib version and re-render).
+- The v1.0.0 tree carried an older `Fig2_primary_interaction.py`. Rebuilding from it produced
+  four text collisions (panel-A subtitle over the axis title, the two panel-B x-axis labels over
+  each other, the legend over its values, the panel-B note over panel C). The manuscript had
+  already moved to a later layout (offset annotations with a white box, an anchored legend, the
+  directional prose moved into the caption).
+- This revision syncs that maintained script (plus the public-loading changes), so the public
+  figure now matches the manuscript byte for byte (`6ec9598…`, 375.9 × 446.9 pt) and its
+  24 checks pass from a public checkout.
 
 ### Unchanged
 
