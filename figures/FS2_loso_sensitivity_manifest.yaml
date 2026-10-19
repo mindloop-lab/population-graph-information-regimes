@@ -13,19 +13,25 @@ inputs:
   derived/sensitivity_summary.csv: 7c697a85174857c3192ef9fdde7a6a71eecbc3fa43ae37a1ff92271be45213af
 script:
   path: figures/FS2_loso_sensitivity.py
-  sha256: 51e70152dda14656736815723b2fa6d01aedc51f7e95458642fe825611323341
+  sha256: d92133f946b073697db5bdd3a84a587f0ca264ff9d8a3780ac6c01e4bfc6d7cf
 shared_module:
   path: figures/_frozen_inputs.py
   sha256: 4651934105d7ee308b94d0ced79c19f3c10743f9eec3ac887a3c7b5456330bf1
-command: cd <repo-root> && .venv-figures/bin/python figures/FS2_loso_sensitivity.py
+command: python3 figures/FS2_loso_sensitivity.py  (run from the repository root; pinned
+  artifacts were rendered from this source)
+revision_note: '261018: in-figure wording changed from LOSO to site-omission (title,
+  x-axis, legend), and the legend was moved from lower-right to upper-left. The previously
+  shipped PDF shows the legend at upper-left although this script said ''lower right'',
+  so the shipped artwork and the script were not in agreement; regeneration now matches
+  the shipped layout. No value, range or axis scale changed.'
 outputs:
-  FS2_loso_sensitivity.pdf: c0bd691b1d919e0407fcccdae8865e4d4581b062dd8005432a674d0d606b9c2b
-  FS2_loso_sensitivity.svg: 0a784cea8ba441e220fa2eaa8b36a46689b5b4abaa9f832ed6c45c50d2ebf3c1
-  FS2_loso_sensitivity.png: 2c379460a124a6ba8e443236cf142ed9aea4fc9b74842354006a33a7acb4953c
+  FS2_loso_sensitivity.pdf: d374fe5e0cb49028c9dc385ae45089cf7a177662213238a3b5f0877945da3495
+  FS2_loso_sensitivity.svg: 6b5701b8fedf1056b3c63c08e2bcec274691e4b20a33f6ddc7acc37e74bddcd6
+  FS2_loso_sensitivity.png: ab6af553cbd73baf3a0e700f19e7d937febda3d2d68cb54b8ba4f9bdb342fbef
 environment:
   python: 3.12.13
   matplotlib: 3.11.2
-  platform: Linux-7.0.0-30-generic-x86_64-with-glibc2.43
+  platform: Linux-7.0.0-34-generic-x86_64-with-glibc2.43
 validation:
   checks: 11 PASS, 0 FAIL
   ranges:

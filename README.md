@@ -1,8 +1,18 @@
 # population-graph-information-regimes
 
 This repository accompanies **"Information regimes in population-graph neuroimaging: cohort
-context and implementation-dependent evaluation sensitivity"** (submission version RC4,
-2026-09-30).
+context and implementation-dependent evaluation sensitivity"**.
+
+Manuscript versions and dates: the first public release (tag `v1.0.0`, commit `b83ad83`)
+accompanied manuscript **RC4 (2026-09-30)**. The revision prepared here supports manuscript
+**RC5.3 (2026-10-19)** and is not yet released. The manuscript was submitted to bioRxiv on
+**2 October 2026** and first posted on **8 October 2026** (DOI
+`10.64898/2026.10.02.756253`, CC-BY 4.0).
+
+| manuscript | date | this repository |
+|---|---|---|
+| RC4 | 2026-09-30 | tag `v1.0.0`, commit `b83ad83` |
+| RC5.3 | 2026-10-19 | this revision; release pending author approval |
 
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
@@ -58,6 +68,9 @@ Code: GPL-3.0 (the controlled implementations wrap GPL-3.0 upstreams; see
 ## Citation
 
 Repository: <https://github.com/mindloop-lab/population-graph-information-regimes>
+
+Paper preprint: <https://doi.org/10.64898/2026.10.02.756253> (bioRxiv; submitted 2 October 2026,
+first posted 8 October 2026, CC-BY 4.0).
 
 Software archive (v1.0.0): DOI `10.5281/zenodo.23104123` — see `CITATION.cff`. Cite both the
 software record and the paper.

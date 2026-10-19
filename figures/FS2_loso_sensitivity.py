@@ -124,12 +124,12 @@ ax.set_yticks([ys[s] for s in ("666", "1024", "2024")],
               [STAGE_LABEL[s] for s in ("666", "1024", "2024")])
 ax.set_ylim(-0.6, 2.6)
 ax.set_ylabel("Preselected outer split")
-ax.set_xlabel("Leave-one-site-out interaction, ΔΔAUC")
-ax.set_title("LOSO sensitivity range per preselected split", loc="left", pad=6)
+ax.set_xlabel("Site-omission interaction (leave-one-site-out evaluation), ΔΔAUC")
+ax.set_title("Site-omission range per preselected split", loc="left", pad=6)
 ax.legend(handles=[
-    Line2D([], [], color=CB["green"], lw=2.0, label="LOSO sensitivity range"),
+    Line2D([], [], color=CB["green"], lw=2.0, label="site-omission range"),
     Line2D([], [], color="black", marker="D", ls="none", ms=5, label="main ΔΔAUC point"),
-], loc="lower right", frameon=False, handlelength=1.8, borderaxespad=0.2)
+], loc="upper left", frameon=False, handlelength=1.8, borderaxespad=0.2)
 ax.annotate("This is a sensitivity range, not a confidence interval. Each split is shown "
             "separately; the splits are not combined.",
             xy=(0, -0.34), xycoords="axes fraction", fontsize=7.0, color=CB["grey"],
@@ -188,6 +188,11 @@ manifest = {
     "shared_module": {"path": "figures/_frozen_inputs.py",
                       "sha256": sha(Path(__file__).resolve().parent / "_frozen_inputs.py")},
     "command": "python3 figures/FS2_loso_sensitivity.py  (run from the repository root; pinned artifacts were rendered from this source)",
+    "revision_note": "261018: in-figure wording changed from LOSO to site-omission (title, x-axis, legend), "
+                     "and the legend was moved from lower-right to upper-left. The previously shipped PDF "
+                     "shows the legend at upper-left although this script said 'lower right', so the shipped "
+                     "artwork and the script were not in agreement; regeneration now matches the shipped layout. "
+                     "No value, range or axis scale changed.",
     "outputs": {o: sha(FIGDIR / o) for o in ("FS2_loso_sensitivity.pdf", "FS2_loso_sensitivity.svg",
                                              "FS2_loso_sensitivity.png")},
     "environment": {"python": platform.python_version(), "matplotlib": matplotlib.__version__,
