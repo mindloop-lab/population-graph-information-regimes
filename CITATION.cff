@@ -18,6 +18,7 @@ authors:
       Needs, Chongqing Normal University
   - family-names: Yu
     given-names: Biantian
+    orcid: "https://orcid.org/0009-0000-8652-9543"
     affiliation: School of Mathematical Sciences, Chongqing Normal University
   - family-names: Wan
     given-names: Keliang
@@ -26,8 +27,8 @@ authors:
     given-names: Qian
     affiliation: >-
       Department of Child Health Care, Children's Hospital of Chongqing Medical
-      University; National Clinical Research Center for Child Health and Disorders;
-      Ministry of Education Key Laboratory of Child Development and Disorders;
+      University; National Clinical Research Center for Child Health and Disorders,
+      Ministry of Education Key Laboratory of Child Development and Disorders,
       Chongqing Key Laboratory of Child Health and Nutrition
   - family-names: Zhang
     given-names: Fanghong
@@ -41,9 +42,12 @@ authors:
     given-names: Hongzhi
     orcid: "https://orcid.org/0000-0002-2746-648X"
     affiliation: >-
-      School of Artificial Intelligence, Chongqing University of Posts and
-      Telecommunications; Chongqing Key Laboratory of Intelligence Health,
-      Chongqing University of Posts and Telecommunications
+      School of Artificial Intelligence, and the CMEC Key Laboratory of
+      Intelligence Health, Chongqing University of Posts and Telecommunications;
+      Chongqing Key Laboratory of Computational Intelligence, Key Laboratory of
+      Cyberspace Big Data Intelligent Security, Ministry of Education, and Key
+      Laboratory of Big Data Intelligent Computing, Chongqing University of Posts
+      and Telecommunications
 version: 1.0.0
 date-released: "2026-10-02"
 license: GPL-3.0
@@ -68,6 +72,7 @@ preferred-citation:
         Needs, Chongqing Normal University
     - family-names: Yu
       given-names: Biantian
+      orcid: "https://orcid.org/0009-0000-8652-9543"
       affiliation: School of Mathematical Sciences, Chongqing Normal University
     - family-names: Wan
       given-names: Keliang
@@ -76,8 +81,8 @@ preferred-citation:
       given-names: Qian
       affiliation: >-
         Department of Child Health Care, Children's Hospital of Chongqing Medical
-        University; National Clinical Research Center for Child Health and Disorders;
-        Ministry of Education Key Laboratory of Child Development and Disorders;
+        University; National Clinical Research Center for Child Health and Disorders,
+        Ministry of Education Key Laboratory of Child Development and Disorders,
         Chongqing Key Laboratory of Child Health and Nutrition
     - family-names: Zhang
       given-names: Fanghong
@@ -91,9 +96,12 @@ preferred-citation:
       given-names: Hongzhi
       orcid: "https://orcid.org/0000-0002-2746-648X"
       affiliation: >-
-        School of Artificial Intelligence, Chongqing University of Posts and
-        Telecommunications; Chongqing Key Laboratory of Intelligence Health,
-        Chongqing University of Posts and Telecommunications
+        School of Artificial Intelligence, and the CMEC Key Laboratory of
+        Intelligence Health, Chongqing University of Posts and Telecommunications;
+        Chongqing Key Laboratory of Computational Intelligence, Key Laboratory of
+        Cyberspace Big Data Intelligent Security, Ministry of Education, and Key
+        Laboratory of Big Data Intelligent Computing, Chongqing University of Posts
+        and Telecommunications
   doi: "10.64898/2026.10.02.756253"
   url: "https://doi.org/10.64898/2026.10.02.756253"
   journal: bioRxiv
