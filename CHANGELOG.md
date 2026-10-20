@@ -39,6 +39,10 @@ recomputed, and nothing in `frozen_results/` changed.
   `split_labels` / `split_provenance` in the manifest record the mapping to the frozen record.
 - `figures/FS2_loso_sensitivity_manifest.yaml`: `revision_note` records the wording, legend and
   label changes.
+- Graphical abstract (journal submission file, not part of the software archive): the zero axis of
+  the interaction panel is now drawn to the last result row instead of a fixed offset, and the
+  generator fails if the axis stops short of a marker. Numbers are unchanged and still read from
+  the frozen chain.
 
 ### Metadata
 
