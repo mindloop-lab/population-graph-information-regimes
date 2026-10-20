@@ -1,0 +1,7 @@
+regime	definition	query_in_training	other_queries	role	evidence
+P0 / R0-T	transductive	yes	yes	cohort-conditioned	evaluated
+P1 / R1-C	cohort-visible inference	no	yes	cohort-conditioned	evaluated
+P2	batch / context-dose (k swept)	no	k of N	context-budget sensitivity	definition only
+P3 / R2-Q	single-query inference setting	no	no	single-query inference	definition only
+P4	size-matched target-site context	no	site-matched	mechanism probe	definition only
+P5 / LOSO	trained on the remaining sites, evaluated on the held-out site	no	held-out site	site generalisation	definition only

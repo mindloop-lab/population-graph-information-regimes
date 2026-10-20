@@ -63,6 +63,28 @@ recomputed, and nothing in `frozen_results/` changed.
   figure now matches the manuscript byte for byte (`6ec9598…`, 375.9 × 446.9 pt) and its
   24 checks pass from a public checkout.
 
+### Splits (new in this revision)
+
+- `splits/` now ships the two frozen membership tables used by the manuscript, byte for byte:
+  `mixed_site_dx_5fold_seed666.csv` (seed 666, 4,355 rows, `fa689961…`) and
+  `mixed_site_dx_5fold_v2.csv` (seeds 1024, 2024 and the unused reserve 2025, 13,065 rows,
+  `d7d2a28c…`), with their fold summaries and a README giving the field descriptions.
+- The README records the encodings: `label` 1 = ASD, 0 = TD; `outer_fold` 0–4 (labelled 1–5 in
+  the manuscript); within a (`split_seed`, `outer_fold`) the three roles are disjoint and every
+  subject is `query` once.
+- `mixed_site_dx_5fold_v2.csv` does **not** contain seed 666. The seed-666 table is a separate
+  file from an earlier run and is identified by its own hash; its generating code was not
+  recovered and is not attributed to either script.
+- `docs/CONFIG_MAPPING.md` states side by side what the historical `locked_campaign_v1.yaml`
+  describes (R1-C vs R2-Q, seeds 1024/2024/2025) and what the manuscript reports (P0 vs P1,
+  partitions 666/1024/2024). The historical file is not re-dated or rewritten.
+
+### Table 1 source (new in this revision)
+
+- `manuscript/table1_protocols.tsv` is the single source of the regime taxonomy;
+  `manuscript/build_table1.py` generates the LaTeX (six columns, the last carrying the evidence
+  scope). Rebuilding from the TSV reproduces the manuscript table body exactly.
+
 ### Unchanged
 
 - Split 666 still has no per-subject record; the reproducibility limitation stated in the README
