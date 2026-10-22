@@ -91,3 +91,8 @@ the pull request):
 - `Fig2_primary_interaction.py` 24/24; `FS2_loso_sensitivity.py` 11/11; PDFs identical to the
   tracked files;
 - no journal-only files (cover letter, disclosure, internal audit records) in the tree.
+
+## 6. Validation log
+
+- `cffconvert --validate -i CITATION.cff` → "Citation metadata are valid according to schema version 1.2.0" (2026-10-22).
+- Release date: `date-released` currently holds the planned 2026-10-23. It must be set to the actual date immediately before tagging; if the release slips, the date moves with it.
