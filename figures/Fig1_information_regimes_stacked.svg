@@ -1,52 +1,707 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="422" height="1093" viewBox="4.0 -6.0 422.0 1093.0" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
-<rect x="4.0" y="-6.0" width="422.0" height="1093.0" fill="#ffffff"/>
-<line x1="200.0" y1="127.1" x2="220.0" y2="125.9" stroke="#000000" stroke-width="2.0" marker-end="url(#arrow)"/>
-<rect x="159.6" y="118.0" width="100.8" height="15.0" fill="#ffffff"/>
-<text x="210.0" y="130.1" font-size="10.0" text-anchor="middle" xml:space="preserve">PRIMARY CONTRAST</text>
-<line x1="105.1" y1="536.8" x2="134.9" y2="578.2" stroke="#999999" stroke-width="1.5"/>
-<rect x="20.0" y="10.0" width="365.0" height="35.0" rx="0" fill="#f5f5f5" stroke="#666666" stroke-width="1.0"/>
-<text x="30.0" y="32.4" font-size="14.0" font-weight="700" text-anchor="start">A  Two-axis regime taxonomy</text>
-<rect x="20.0" y="45.0" width="365.0" height="683.0" rx="0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<text x="202.5" y="390.7" font-size="12.0" font-weight="400" text-anchor="middle"></text>
-<g transform="translate(37.5,185.0) rotate(-90)"><text x="0" y="-3.3" font-size="12.0" font-weight="700" text-anchor="middle" xml:space="preserve" dominant-baseline="middle">Training-time cohort </text><text x="0" y="11.7" font-size="12.0" font-weight="700" text-anchor="middle" xml:space="preserve" dominant-baseline="middle">visibility</text></g>
-<text x="220.0" y="321.7" font-size="12.0" font-weight="700" text-anchor="middle">Inference-time query context →</text>
-<line x1="70.0" y1="190.5" x2="355.0" y2="190.5" stroke="#bbbbbb" stroke-width="1.0"/>
-<line x1="210.0" y1="180.0" x2="211.0" y2="180.0" stroke="#bbbbbb" stroke-width="1.0"/>
-<rect x="80.0" y="75.0" width="120.0" height="111.0" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.0"/>
-<text x="140.0" y="89.7" font-size="12.0" font-weight="400" text-anchor="middle">P0 / R0-T</text><text x="140.0" y="104.7" font-size="12.0" font-weight="700" text-anchor="middle">PRIMARY</text><text x="140.0" y="119.7" font-size="12.0" font-weight="400" text-anchor="middle">query nodes </text><text x="140.0" y="134.7" font-size="12.0" font-weight="400" text-anchor="middle">visible during </text><text x="140.0" y="149.7" font-size="12.0" font-weight="400" text-anchor="middle">training</text><text x="140.0" y="164.7" font-size="12.0" font-weight="400" text-anchor="middle">cohort-visible </text><text x="140.0" y="179.7" font-size="12.0" font-weight="400" text-anchor="middle">inference</text>
-<rect x="220.0" y="75.0" width="120.0" height="95.0" rx="8" fill="#d5e8d4" stroke="#82b366" stroke-width="1.0"/>
-<text x="280.0" y="96.7" font-size="12.0" font-weight="400" text-anchor="middle">P1 / R1-C</text><text x="280.0" y="111.7" font-size="12.0" font-weight="700" text-anchor="middle">PRIMARY</text><text x="280.0" y="126.7" font-size="12.0" font-weight="400" text-anchor="middle">train-only graph</text><text x="280.0" y="141.7" font-size="12.0" font-weight="400" text-anchor="middle">cohort-visible </text><text x="280.0" y="156.7" font-size="12.0" font-weight="400" text-anchor="middle">inference</text>
-<rect x="220.0" y="210.0" width="120.0" height="74.8" rx="8" fill="#f5f5f5" stroke="#999999" stroke-width="1.0"/>
-<text x="280.0" y="223.7" font-size="11.0" font-weight="400" text-anchor="middle">P3 / R2-Q</text><text x="280.0" y="237.5" font-size="11.0" font-weight="400" text-anchor="middle">secondary campaign</text><text x="280.0" y="251.2" font-size="11.0" font-weight="400" text-anchor="middle">strict </text><text x="280.0" y="265.0" font-size="11.0" font-weight="400" text-anchor="middle">single-query </text><text x="280.0" y="278.7" font-size="11.0" font-weight="400" text-anchor="middle">inference</text>
-<rect x="80.0" y="226.0" width="120.0" height="70.0" rx="8" fill="#f5f5f5" stroke="#999999" stroke-width="1.0"/>
-<text x="140.0" y="244.2" font-size="11.0" font-weight="400" text-anchor="middle">P2 / P4 / P5</text><text x="140.0" y="258.0" font-size="11.0" font-weight="400" text-anchor="middle">secondary / </text><text x="140.0" y="271.7" font-size="11.0" font-weight="400" text-anchor="middle">sensitivity </text><text x="140.0" y="285.5" font-size="11.0" font-weight="400" text-anchor="middle">regimes</text>
-<rect x="20.0" y="375.0" width="365.0" height="35.0" rx="0" fill="#f5f5f5" stroke="#666666" stroke-width="1.0"/>
-<text x="30.0" y="397.4" font-size="14.0" font-weight="700" text-anchor="start">B  Visibility is not supervision</text>
-<rect x="35.0" y="425.0" width="155.0" height="35.0" rx="8" fill="#ffffff" stroke="#6c8ebf" stroke-width="1.0"/>
-<text x="112.5" y="446.7" font-size="12.0" font-weight="700" text-anchor="middle">P0 — training graph</text>
-<ellipse cx="87.5" cy="512.5" rx="37.5" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.0"/>
-<text x="87.5" y="495.7" font-size="11.0" font-weight="400" text-anchor="middle">Fit </text><text x="87.5" y="509.5" font-size="11.0" font-weight="400" text-anchor="middle">subjects</text><text x="87.5" y="523.2" font-size="11.0" font-weight="700" text-anchor="middle">labels </text><text x="87.5" y="537.0" font-size="11.0" font-weight="700" text-anchor="middle">used</text>
-<ellipse cx="152.5" cy="602.5" rx="37.5" ry="27.5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.0"/>
-<text x="152.5" y="592.6" font-size="11.0" font-weight="400" text-anchor="middle">Query </text><text x="152.5" y="606.4" font-size="11.0" font-weight="400" text-anchor="middle">subjects</text><text x="152.5" y="620.1" font-size="11.0" font-weight="700" text-anchor="middle">unlabeled</text>
-<rect x="210.0" y="425.0" width="155.0" height="35.0" rx="8" fill="#ffffff" stroke="#82b366" stroke-width="1.0"/>
-<text x="287.5" y="446.7" font-size="12.0" font-weight="700" text-anchor="middle">P1 — training graph</text>
-<ellipse cx="290.0" cy="525.0" rx="40.0" ry="30.0" fill="#d5e8d4" stroke="#82b366" stroke-width="1.0"/>
-<text x="290.0" y="522.0" font-size="11.0" font-weight="400" text-anchor="middle">Fit subjects</text><text x="290.0" y="535.7" font-size="11.0" font-weight="700" text-anchor="middle">labels used</text>
-<ellipse cx="290.0" cy="620.0" rx="45.0" ry="30.0" fill="#f5f5f5" stroke="#999999" stroke-width="1.0" stroke-dasharray="6 4"/>
-<text x="290.0" y="603.2" font-size="11.0" font-weight="400" text-anchor="middle">Query </text><text x="290.0" y="617.0" font-size="11.0" font-weight="400" text-anchor="middle">subjects</text><text x="290.0" y="630.7" font-size="11.0" font-weight="700" text-anchor="middle">absent during </text><text x="290.0" y="644.5" font-size="11.0" font-weight="700" text-anchor="middle">training</text>
-<rect x="45.0" y="655.0" width="310.0" height="61.0" rx="8" fill="#fff2cc" stroke="#d6b656" stroke-width="1.0"/>
-<text x="200.0" y="668.7" font-size="11.0" font-weight="400" text-anchor="middle">Same supervised fit set + same validation-based </text><text x="200.0" y="682.5" font-size="11.0" font-weight="400" text-anchor="middle">selection rules.</text><text x="200.0" y="696.2" font-size="11.0" font-weight="700" text-anchor="middle">Intervention: graph visibility, not </text><text x="200.0" y="710.0" font-size="11.0" font-weight="700" text-anchor="middle">diagnostic-label supervision.</text>
-<rect x="20.0" y="746.0" width="390.0" height="35.0" rx="0" fill="#f5f5f5" stroke="#666666" stroke-width="1.0"/>
-<text x="30.0" y="768.4" font-size="14.0" font-weight="700" text-anchor="start">C  Primary estimand and replication scope</text>
-<rect x="40.0" y="801.0" width="350.0" height="75.0" rx="8" fill="#ffffff" stroke="#666666" stroke-width="1.0"/>
-<text x="94.1" y="834.9" font-size="13.0" font-weight="700">ΔΔAUC</text><text x="133.1" y="834.9" font-size="13.0" font-weight="700"> </text><text x="140.9" y="834.9" font-size="13.0" font-weight="700">=</text><text x="148.7" y="834.9" font-size="13.0" font-weight="700"> </text><text x="156.5" y="834.9" font-size="13.0" font-weight="700">(AUC</text><text x="187.7" y="836.9" font-size="9.8" font-weight="700">EVGCN,P0</text><text x="234.5" y="834.9" font-size="13.0" font-weight="700"> </text><text x="242.3" y="834.9" font-size="13.0" font-weight="700">−</text><text x="250.1" y="834.9" font-size="13.0" font-weight="700"> </text><text x="257.9" y="834.9" font-size="13.0" font-weight="700">AUC</text><text x="281.3" y="836.9" font-size="9.8" font-weight="700">EVGCN,P1</text><text x="328.1" y="834.9" font-size="13.0" font-weight="700">)</text><text x="105.8" y="851.2" font-size="13.0" font-weight="700">−</text><text x="113.6" y="851.2" font-size="13.0" font-weight="700"> </text><text x="121.4" y="851.2" font-size="13.0" font-weight="700">(AUC</text><text x="152.6" y="853.2" font-size="9.8" font-weight="700">Parisot,P0</text><text x="211.1" y="851.2" font-size="13.0" font-weight="700"> </text><text x="218.9" y="851.2" font-size="13.0" font-weight="700">−</text><text x="226.7" y="851.2" font-size="13.0" font-weight="700"> </text><text x="234.5" y="851.2" font-size="13.0" font-weight="700">AUC</text><text x="257.9" y="853.2" font-size="9.8" font-weight="700">Parisot,P1</text><text x="316.4" y="851.2" font-size="13.0" font-weight="700">)</text>
-<rect x="40.0" y="906.0" width="105.0" height="60.0" rx="8" fill="#e1d5e7" stroke="#9673a6" stroke-width="1.0"/>
-<text x="92.5" y="925.2" font-size="12.0" font-weight="400" text-anchor="middle">Split 666</text><text x="92.5" y="940.2" font-size="12.0" font-weight="400" text-anchor="middle">frozen prior </text><text x="92.5" y="955.2" font-size="12.0" font-weight="400" text-anchor="middle">audit</text>
-<rect x="160.0" y="906.0" width="105.0" height="60.0" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.0"/>
-<text x="212.5" y="925.2" font-size="12.0" font-weight="400" text-anchor="middle">Split 1024</text><text x="212.5" y="940.2" font-size="12.0" font-weight="400" text-anchor="middle">M4.5-S1 </text><text x="212.5" y="955.2" font-size="12.0" font-weight="400" text-anchor="middle">extension</text>
-<rect x="280.0" y="906.0" width="105.0" height="60.0" rx="8" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.0"/>
-<text x="332.5" y="925.2" font-size="12.0" font-weight="400" text-anchor="middle">Split 2024</text><text x="332.5" y="940.2" font-size="12.0" font-weight="400" text-anchor="middle">M4.5-S1 </text><text x="332.5" y="955.2" font-size="12.0" font-weight="400" text-anchor="middle">extension</text>
-<rect x="45.0" y="996.0" width="340.0" height="75.0" rx="8" fill="#fff2cc" stroke="#d6b656" stroke-width="1.0"/>
-<text x="215.0" y="1009.9" font-size="11.0" font-weight="400" text-anchor="middle">Three preselected splits = replication units</text><text x="215.0" y="1023.6" font-size="11.0" font-weight="700" text-anchor="middle">No pooling · no cross-split mean · no </text><text x="215.0" y="1037.3" font-size="11.0" font-weight="700" text-anchor="middle">arbitrary-split invariance claim</text><text x="215.0" y="1051.1" font-size="11.0" font-weight="400" text-anchor="middle"></text><text x="215.0" y="1064.8" font-size="11.0" font-weight="400" text-anchor="middle">M4.5-S1 extension run: 1024 + 2024 only (120 cells).</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="820"
+   height="770"
+   viewBox="0 0 820 770"
+   font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif"
+   version="1.1"
+   id="svg50"
+   sodipodi:docname="Fig1_information_regimes_stacked_submission.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="Fig1_information_regimes_stacked.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview50"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0411451"
+     inkscape:cx="224.62881"
+     inkscape:cy="593.78434"
+     inkscape:window-width="1890"
+     inkscape:window-height="1343"
+     inkscape:window-x="1850"
+     inkscape:window-y="352"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="panel-a" />
+  <defs
+     id="defs1">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto">
+      <path
+         d="M0 0 L10 5 L0 10 z"
+         fill="#222"
+         id="path1" />
+    </marker>
+  </defs>
+  <rect
+     width="820"
+     height="770"
+     fill="#fff"
+     id="rect1" />
+  <g
+     id="panel-a">
+    <rect
+       x="16"
+       y="16"
+       width="788"
+       height="36"
+       rx="0"
+       fill="#f5f5f5"
+       stroke="#666"
+       stroke-width="1"
+       id="rect2" />
+    <text
+       x="26"
+       y="40"
+       font-size="14"
+       font-weight="700"
+       text-anchor="start"
+       fill="#222"
+       id="text2">A  Two-axis regime taxonomy</text>
+    <rect
+       x="16"
+       y="52"
+       width="788"
+       height="324"
+       rx="0"
+       fill="#fff"
+       stroke="#999"
+       stroke-width="1"
+       id="rect3" />
+    <text
+       x="442"
+       y="74"
+       font-size="10.4px"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#666666"
+       id="text3">Inference-time context</text>
+    <text
+       x="265.5"
+       y="94"
+       font-size="11.6"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#444"
+       id="text4">Cohort-visible</text>
+    <text
+       x="618.5"
+       y="94"
+       font-size="11.6"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#444"
+       id="text5">Strict single-query</text>
+    <text
+       x="-196"
+       y="38"
+       font-size="10.2px"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#444444"
+       transform="rotate(-90)"
+       id="text6">Training-time cohort visibility</text>
+    <text
+       x="58"
+       y="147"
+       font-size="10.2"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#555"
+       transform="rotate(-90 58 147)"
+       id="text7">present</text>
+    <text
+       x="58"
+       y="245"
+       font-size="10.2"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#555"
+       transform="rotate(-90 58 245)"
+       id="text8">absent</text>
+    <rect
+       x="98"
+       y="110"
+       width="335.0"
+       height="74"
+       rx="8"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       stroke-width="1.3"
+       id="rect9" />
+    <text
+       x="265.5"
+       y="130"
+       font-size="12.2"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#222"
+       id="text10">P0 / R0-T</text>
+    <text
+       x="265.5"
+       y="150"
+       font-size="10.7"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#2f5597"
+       id="text11">PRIMARY</text>
+    <text
+       x="265.5"
+       y="167"
+       font-size="9.8"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text12">query nodes visible</text>
+    <text
+       x="265.5"
+       y="180"
+       font-size="9.8"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text13">during training</text>
+    <rect
+       x="451.0"
+       y="110"
+       width="335.0"
+       height="74"
+       rx="8"
+       fill="#fafafa"
+       stroke="#c9c9c9"
+       stroke-width="1.1"
+       id="rect13" />
+    <text
+       x="618.5"
+       y="141"
+       font-size="10.5"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#888"
+       id="text14">not part of</text>
+    <text
+       x="618.5"
+       y="160"
+       font-size="9.8"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#999"
+       id="text15">primary contrast</text>
+    <rect
+       x="98"
+       y="208"
+       width="335.0"
+       height="74"
+       rx="8"
+       fill="#d5e8d4"
+       stroke="#82b366"
+       stroke-width="1.3"
+       id="rect15" />
+    <text
+       x="265.5"
+       y="229"
+       font-size="12.2"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#222"
+       id="text16">P1 / R1-C</text>
+    <text
+       x="265.5"
+       y="249"
+       font-size="10.7"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#548235"
+       id="text17">PRIMARY</text>
+    <text
+       x="265.5"
+       y="269"
+       font-size="9.9"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text18">train-only graph</text>
+    <rect
+       x="451.0"
+       y="208"
+       width="335.0"
+       height="74"
+       rx="8"
+       fill="#f5f5f5"
+       stroke="#999"
+       stroke-width="1.1"
+       id="rect18" />
+    <text
+       x="618.5"
+       y="229"
+       font-size="11.8"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#555"
+       id="text19">P3 / R2-Q</text>
+    <text
+       x="618.5"
+       y="250"
+       font-size="9.9"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#666"
+       id="text20">secondary campaign</text>
+    <text
+       x="618.5"
+       y="269"
+       font-size="9.9"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#666"
+       id="text21">strict single-query</text>
+    <line
+       x1="158.3"
+       y1="187"
+       x2="158.3"
+       y2="203"
+       stroke="#222"
+       stroke-width="2.0"
+       marker-end="url(#arrow)"
+       id="line21" />
+    <rect
+       x="166.3"
+       y="188.0"
+       width="90"
+       height="17"
+       rx="0"
+       fill="#fff"
+       stroke="#fff"
+       stroke-width="0"
+       id="rect21" />
+    <text
+       x="168.3"
+       y="200.0"
+       font-size="9.1"
+       font-weight="700"
+       text-anchor="start"
+       fill="#222"
+       id="text22">PRIMARY CONTRAST</text>
+    <rect
+       x="98"
+       y="304"
+       width="688"
+       height="56"
+       rx="8"
+       fill="#f7f7f7"
+       stroke="#aaa"
+       stroke-width="1"
+       id="rect22" />
+    <text
+       x="110"
+       y="322"
+       font-size="10.9"
+       font-weight="700"
+       text-anchor="start"
+       fill="#555"
+       id="text23">P2 / P4 / P5</text>
+    <text
+       x="110"
+       y="339"
+       font-size="9.5"
+       font-weight="400"
+       text-anchor="start"
+       fill="#666"
+       id="text24">secondary context/site-sensitivity regimes</text>
+  </g>
+  <g
+     id="panel-b">
+    <rect
+       x="16"
+       y="394"
+       width="385.0"
+       height="36"
+       rx="0"
+       fill="#f5f5f5"
+       stroke="#666"
+       stroke-width="1"
+       id="rect24" />
+    <text
+       x="26"
+       y="418"
+       font-size="14"
+       font-weight="700"
+       text-anchor="start"
+       fill="#222"
+       id="text25">B  Visibility is not supervision</text>
+    <rect
+       x="30"
+       y="446"
+       width="165.5"
+       height="36"
+       rx="8"
+       fill="#fff"
+       stroke="#6c8ebf"
+       stroke-width="1.2"
+       id="rect25" />
+    <text
+       x="112.75"
+       y="469"
+       font-size="11.5"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#222"
+       id="text26">P0 — training graph</text>
+    <rect
+       x="221.5"
+       y="446"
+       width="165.5"
+       height="36"
+       rx="8"
+       fill="#fff"
+       stroke="#82b366"
+       stroke-width="1.2"
+       id="rect26" />
+    <text
+       x="304.25"
+       y="469"
+       font-size="11.5"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#222"
+       id="text27">P1 — training graph</text>
+    <rect
+       x="32"
+       y="689"
+       width="353.0"
+       height="52"
+       rx="8"
+       fill="#fff2cc"
+       stroke="#d6b656"
+       stroke-width="1.2"
+       id="rect35" />
+    <text
+       x="208.5"
+       y="709"
+       font-size="10.2"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text36">Same supervised fit set and validation-based selection.</text>
+    <text
+       x="208.5"
+       y="728"
+       font-size="10.6"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text37">Intervention: graph visibility, not label supervision.</text>
+  </g>
+  <g
+     id="panel-c">
+    <rect
+       x="419.0"
+       y="394"
+       width="385.0"
+       height="36"
+       rx="0"
+       fill="#f5f5f5"
+       stroke="#666"
+       stroke-width="1"
+       id="rect37" />
+    <text
+       x="429.0"
+       y="418"
+       font-size="14"
+       font-weight="700"
+       text-anchor="start"
+       fill="#222"
+       id="text38">C  Primary estimand and replication scope</text>
+    <rect
+       x="437.0"
+       y="446"
+       width="349.0"
+       height="82"
+       rx="8"
+       fill="#fff"
+       stroke="#777"
+       stroke-width="1.2"
+       id="rect38" />
+    <text
+       x="611.5"
+       y="477"
+       font-size="12.0"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#222"
+       id="text39">ΔΔAUC = ΔAUC(EV-GCN) − ΔAUC(Parisot-GCN)</text>
+    <text
+       x="611.5"
+       y="502"
+       font-size="10.8"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text40">ΔAUC(model) = AUC(P0) − AUC(P1)</text>
+    <rect
+       x="437.0"
+       y="556"
+       width="103.0"
+       height="66"
+       rx="8"
+       fill="#e1d5e7"
+       stroke="#9673a6"
+       stroke-width="1.1"
+       id="rect40" />
+    <text
+       x="488.5"
+       y="581"
+       font-size="10.5"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text41">Split 666</text>
+    <text
+       x="488.5"
+       y="601"
+       font-size="9.6"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text42">frozen prior audit</text>
+    <rect
+       x="550.0"
+       y="556"
+       width="103.0"
+       height="66"
+       rx="8"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       stroke-width="1.1"
+       id="rect42" />
+    <text
+       x="601.5"
+       y="581"
+       font-size="10.5"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text43">Split 1024</text>
+    <text
+       x="601.5"
+       y="601"
+       font-size="9.6"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text44">M4.5-S1 extension</text>
+    <rect
+       x="663.0"
+       y="556"
+       width="103.0"
+       height="66"
+       rx="8"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       stroke-width="1.1"
+       id="rect44" />
+    <text
+       x="714.5"
+       y="581"
+       font-size="10.5"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text45">Split 2024</text>
+    <text
+       x="714.5"
+       y="601"
+       font-size="9.6"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444"
+       id="text46">M4.5-S1 extension</text>
+    <rect
+       x="437.0"
+       y="667"
+       width="349.0"
+       height="74"
+       rx="8"
+       fill="#fff2cc"
+       stroke="#d6b656"
+       stroke-width="1.2"
+       id="rect46" />
+    <text
+       x="611.5"
+       y="689"
+       font-size="10.4"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text47">Two primary + one historical split</text>
+    <text
+       x="611.5"
+       y="707"
+       font-size="9.4"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text48">No pooling · no cross-split mean</text>
+    <text
+       x="611.5"
+       y="722"
+       font-size="9.4"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#333"
+       id="text49">No arbitrary-split invariance claim</text>
+    <text
+       x="611.5"
+       y="737"
+       font-size="9.0"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#555"
+       id="text50">M4.5-S1 extension: 1024 + 2024 only (120 cells)</text>
+  </g>
+  <g
+     id="g52"
+     transform="translate(-404.41773,368.06462)">
+    <circle
+       cx="495.91772"
+       cy="158.43538"
+       r="35.676495"
+       fill="#d5e8d4"
+       stroke="#82b366"
+       stroke-width="1.64701"
+       id="circle28" />
+    <text
+       x="496.45999"
+       y="155"
+       font-size="10.2px"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#444444"
+       id="text29">Fit subjects</text>
+    <text
+       x="496.45999"
+       y="170"
+       font-size="9.6px"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444444"
+       id="text30">labels used</text>
+  </g>
+  <g
+     id="g53"
+     transform="translate(-410.41773,387)">
+    <circle
+       cx="558.29865"
+       cy="258.94687"
+       r="35.676697"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       stroke-width="1.64661"
+       id="circle30" />
+    <text
+       x="558.84003"
+       y="262"
+       font-size="9.9px"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#444444"
+       id="text31">Query subjects</text>
+    <text
+       x="558.84003"
+       y="275"
+       font-size="9.5px"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444444"
+       id="text32">unlabeled</text>
+  </g>
+  <line
+     x1="104.41552"
+     y1="561.38159"
+     x2="132.69385"
+     y2="613.63806"
+     stroke="#aaaaaa"
+     stroke-width="2.48389"
+     id="line32" />
+  <g
+     id="g54"
+     transform="translate(-420.41773,358.60001)">
+    <circle
+       cx="695.36005"
+       cy="167.89999"
+       r="35.676693"
+       fill="#d5e8d4"
+       stroke="#82b366"
+       stroke-width="1.64662"
+       id="circle32" />
+    <text
+       x="695.46002"
+       y="165"
+       font-size="10.2px"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#444444"
+       id="text33">Fit subjects</text>
+    <text
+       x="695.46002"
+       y="178"
+       font-size="9.6px"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#444444"
+       id="text34">labels used</text>
+  </g>
+  <g
+     id="g51"
+     transform="matrix(1.0053309,0,0,1.0053309,-406.12171,377.77481)">
+    <circle
+       cx="731.11755"
+       cy="266.11038"
+       r="35.706528"
+       fill="#fafafa"
+       stroke="#999999"
+       stroke-width="1.2"
+       stroke-dasharray="5, 4"
+       id="circle34" />
+    <text
+       x="731.84003"
+       y="260"
+       font-size="9.7px"
+       font-weight="700"
+       text-anchor="middle"
+       fill="#555555"
+       id="text35">Query subjects</text>
+    <text
+       x="731.84003"
+       y="276"
+       font-size="9.2px"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#666666"
+       id="text36-6">absent from</text>
+    <text
+       x="731.84003"
+       y="289"
+       font-size="9.2px"
+       font-weight="400"
+       text-anchor="middle"
+       fill="#666666"
+       id="text36-7">training graph</text>
+  </g>
 </svg>

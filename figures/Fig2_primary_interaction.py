@@ -93,6 +93,9 @@ def canonical_texts(node, acc=None):
 
 
 primary = rows("cross_split_primary.csv")
+# revision-1022-v8: historical split on top, separated from the primary block below
+_ORDER = ["666", "1024", "2024"]
+primary = sorted(primary, key=lambda r: _ORDER.index(r["split"]))
 seeds = rows("seed_level_interactions.csv")
 cond = rows("condition_level_auc.csv")
 sens = FROZEN.sensitivity  # derived from S1_FREEZE.yaml when the CSV is not shipped
@@ -112,8 +115,8 @@ def check(ok: bool, label: str, detail: str = "") -> None:
 
 
 check(len(primary) == 3, "exactly three split-level ΔΔAUC points", f"{len(primary)} rows")
-check([r["split"] for r in primary] == ["666", "1024", "2024"],
-      "the three preselected splits, in order", ", ".join(r["split"] for r in primary))
+check({r["split"] for r in primary} == {"666", "1024", "2024"},
+      "the three preselected splits present", ", ".join(r["split"] for r in primary))
 
 traj = {}
 for r in cond:
@@ -178,7 +181,8 @@ plt.rcParams.update({
     "pdf.fonttype": 42, "ps.fonttype": 42, "svg.fonttype": "none",
 })
 
-STAGE_LABEL = {"666": "666 (prior audit)", "1024": "1024 (M4.5-S1)", "2024": "2024 (M4.5-S1)"}
+STAGE_LABEL = {"666": "666 (historical)", "1024": "1024 (primary)",
+               "2024": "2024 (primary)"}
 ARCH_STYLE = {"EV-GCN": dict(color=CB["blue"], ls="-", marker="o", mfc="white", mew=1.1),
               "Parisot": dict(color=CB["orange"], ls="--", marker="s", mfc="white", mew=1.1)}
 LABEL_BBOX = dict(boxstyle="round,pad=0.14", fc="white", ec="none", alpha=0.92)
@@ -208,6 +212,7 @@ axA.axvline(0, color="0.25", lw=1.0, zorder=1)
 axA.set_yticks(ys, [STAGE_LABEL[r["split"]] for r in primary])
 axA.set_ylabel("Preselected outer split")
 axA.set_ylim(-0.62, len(primary) + 0.62)
+axA.axhline(1.5, color="0.55", lw=0.7, ls=(0, (2, 2)), zorder=1)
 axA.set_xlim(-0.005, 0.196)
 axA.set_xlabel("Implementation × training-context interaction, ΔΔAUC")
 axA.set_title("A  Cross-split interaction (no pooled estimate)", loc="left", pad=6)
@@ -325,6 +330,7 @@ for r in ens:
                  ha=ha, va=va, fontsize=6.8, color="black", bbox=LABEL_BBOX, zorder=5)
 axC.axvline(0, color="0.25", lw=1.0, zorder=1)
 axC.set_yticks([2, 1, 0], [STAGE_LABEL[s] for s in ("666", "1024", "2024")])
+axC.axhline(1.5, color="0.55", lw=0.7, ls=(0, (2, 2)), zorder=1)
 axC.set_ylabel("Preselected outer split")
 axC.set_ylim(-0.62, 2.92)
 axC.set_xlim(-0.012, 0.19)
@@ -410,7 +416,7 @@ joined = " | ".join(svg_strings)
 check(joined.count("EV-GCN") >= 1 and joined.count("Parisot") >= 1,
       "both implementations are named in the figure legend",
       f"EV-GCN x{joined.count('EV-GCN')}, Parisot x{joined.count('Parisot')}")
-check(all(t in joined for t in ("666 (prior audit)", "1024 (M4.5-S1)", "2024 (M4.5-S1)")),
+check(all(t in joined for t in ("666 (historical)", "1024 (primary)", "2024 (primary)")),
       "the three stage labels are printed on the page")
 check(sum(joined.count(f"split {s}") for s in fit_splits) >= 2,
       "panel B names both splits it facets (one facet each)",

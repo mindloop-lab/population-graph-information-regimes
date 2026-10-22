@@ -1,0 +1,8 @@
+{
+  "n_subjects": 871,
+  "n_features": 19900,
+  "dtype": "float32",
+  "features_npz_sha256": "65925781adf5c8aebedf5a100b8a4f111267bc756b10cca7019b679c69990455",
+  "source_mat_manifest_sha256": "75ccf613b463be595b5ee93778f75ae5ba62b29d3399b25627ae77c6659f81b4",
+  "n_source_files": 871
+}

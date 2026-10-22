@@ -18,17 +18,17 @@ recorded_by:
     derived/condition_level_auc.csv: 3797794ef8bc5971ee1a59aeeef5ea843324c46af31797f96c547b84b20e0efa
 script:
   path: figures/Fig2_primary_interaction.py
-  sha256: 3e182bce278cf38c7494d202e85052978a9b92f23bc1e7ce3f66614cba71ba7c
+  sha256: afa363084fd3187124cfcb8fbfcdb36493e6c63bb4f19f252b3e575803f96fa8
 command: python3 figures/Fig2_primary_interaction.py  (run from the repository root;
   pinned artifacts were rendered from this source)
 outputs:
-  Fig2_primary_interaction.pdf: 6ec959812b356d85814f36b4ad4c50b41e8a00e35e5e267364c3d25b0cc19544
-  Fig2_primary_interaction.svg: 0be63d428f1388e41d2ef684fa2cb855800fb10a79e3f41b9d324be0b80d29e4
-  Fig2_primary_interaction.png: 0b9ace159ec42753e2796f61bf5d4dea6cfbffbe9ae472aab683aa2b57ae4a9f
+  Fig2_primary_interaction.pdf: b61b6c4cefdb6de97cd5f4dc0bf2de664d258ef7a7778d9dbcc2eff1b7df0b99
+  Fig2_primary_interaction.svg: 7395ef92f7caaa75ef10e96e293358f9d68886c2e340c4c317ebc510041ea981
+  Fig2_primary_interaction.png: ceccc1471dbef303b86b435c6e9575cf87c10fdf243e3ba7f9e6fc172515d525
 environment:
   python: 3.12.13
-  matplotlib: 3.11.2
-  platform: Linux-7.0.0-34-generic-x86_64-with-glibc2.43
+  matplotlib: 3.11.1
+  platform: Linux-6.8.0-146-generic-x86_64-with-glibc2.39
 validation:
   checks: 24 PASS, 0 FAIL
   condition_level_trajectories:
@@ -45,9 +45,9 @@ validation:
 pairing_rule: combination / group-mean, not one-to-one subject pairing
 labels:
   split_labels_in_figure:
-    '666': 666 (prior audit)
-    '1024': 1024 (M4.5-S1)
-    '2024': 2024 (M4.5-S1)
+    '666': 666 (historical)
+    '1024': 1024 (primary)
+    '2024': 2024 (primary)
   labels_recorded_in_the_freeze:
   - 666 (frozen M4.4R)
   - '1024'

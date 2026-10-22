@@ -1,5 +1,39 @@
 # Changelog
 
+## 1.1.0 (2026-10-22) — prepared, not yet published
+
+Increment for the manuscript revision candidate `revision-1022-v8`. No primary result, split,
+frozen value or checkpoint was changed; `frozen_results/` is untouched.
+
+### Added
+
+- `control_analysis/` — the negative-control study: `nc_prepare_features.py`, `nc_cell.py`,
+  `nc_run_matrix.py` and the strict aggregator `nc_aggregate_v2.py`, the 60 per-cell records
+  (P0/P1 × splits 1024/2024 × 5 folds × 3 training seeds), the strict deterministic aggregate
+  and the separate dropout diagnostic, the feature-manifest identity and an environment note.
+  The strict aggregate requires exactly 60 canonical cells, 30 matched keys, both regimes, a
+  query set equal to the split registry, finite predictions, consistent metadata, one feature
+  hash per (split, fold) shared across regimes and seeds, and different training-node sets; it
+  passes at max |Δp| = 8.56e-11 against the registered 1e-6 tolerance with an exact-zero AUC
+  difference.
+- `checklist/` — Reporting Checklist v2: source Markdown and generated LaTeX. Items 16, 19 and
+  20 are rewritten, item 8 is conditional, and a change record plus a per-item applicability
+  and evidence pointer table are included. Checklist S1 is unchanged in the manuscript
+  supplement.
+
+### Changed
+
+- `figures/Fig1_information_regimes_stacked.{pdf,svg}` — regenerated with the evidence
+  stratification (primary splits 1024/2024; split 666 shown separately as historical support).
+- `figures/Fig2_primary_interaction.{py,pdf,svg,png}` and its manifest — regenerated with split
+  666 placed first and separated by a dashed rule, and `(historical)`/`(primary)` labels.
+- `README.md` — version table, the negative-control section, layout, and citation wording.
+
+### Not included
+
+- Internal control-plane records, the shared-scope sign-off sheet, manuscript sources, and any
+  server-specific path.
+
 ## 1.0.1 (2026-10-22)
 
 Documentation, display and metadata only. No result, range, split, prediction or checkpoint was
