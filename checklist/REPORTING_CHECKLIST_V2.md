@@ -1,8 +1,8 @@
 # Reporting Checklist for Population-Graph Neuroimaging Evaluation
 
-Paper A methodological output (v2 draft, 2026-10-22). Supersedes v1 (2026-09-14) for
-items 16, 19 and 20 only; every other item is unchanged, and v1 is kept in full.
-Change record: `paperA-control/revision-1022-v8/01_CHECKLIST_V2_PROPOSAL.md`.
+Paper A methodological output (v2, 2026-10-22). Supersedes v1 (2026-09-14) for
+items 8, 16, 19 and 20 only; every other item is unchanged, and v1 is kept in full.
+Change record: items 8, 16, 19 and 20; the record and the per-item applicability table are included below and in the supplement.
 
 Paper A methodological output (v1, 2026-09-14). Reusable, self-contained.
 Companion artifacts: `results/registry_v2.csv`, `scripts/analysis_v2.py`,
