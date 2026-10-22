@@ -5,14 +5,18 @@ context and implementation-dependent evaluation sensitivity"**.
 
 Manuscript versions and dates: the first public release (tag `v1.0.0`, commit `b83ad83`)
 accompanied manuscript **RC4 (2026-09-30)**. The revision prepared here supports manuscript
-**RC5.5 (2026-10-19)** and is not yet released. The manuscript was submitted to bioRxiv on
+**RC5.18 (2026-10-21)** and is not yet released. The manuscript was submitted to bioRxiv on
 **2 October 2026** and first posted on **8 October 2026** (DOI
 `10.64898/2026.10.02.756253`, CC-BY 4.0).
 
 | manuscript | date | this repository |
 |---|---|---|
 | RC4 | 2026-09-30 | tag `v1.0.0`, commit `b83ad83` |
-| RC5.5 | 2026-10-19 | this revision; release pending author approval |
+| RC5.18 | 2026-10-21 | this revision; release pending author approval |
+
+The software result layer is unchanged between `v1.0.0` and this revision: no model, split,
+training rule or frozen value has changed. What this revision adds is the frozen split
+registry, the Table 1 source and generator, and documentation.
 
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
@@ -53,7 +57,7 @@ skips itself in a public checkout.
 |---|---|
 | `audit/` | the controlled-evaluation library: regime protocols (P0/P1), graph construction, preprocessing scope, training and checkpoint-selection rules |
 | `scripts/` | named entry points: split generation, controlled runners, aggregation, bootstrap inference, table/figure generation |
-| `configs/` | the locked campaign definition (`configs/study/locked_campaign_v1.yaml`) |
+| `configs/` | the historical campaign configuration (`configs/study/locked_campaign_v1.yaml`). It describes an earlier campaign (R1-C vs R2-Q, split seeds 1024/2024/2025), **not** the P0/P1 contrast reported in the manuscript; see `docs/CONFIG_MAPPING.md` |
 | `frozen_results/` | the frozen record the paper reports from: `S1_FREEZE.yaml`, the per-subject out-of-fold files (`oof/`), the derived table sources (`derived/`), per-cell results, checksums |
 | `tests/` | protocol and adapter tests, including the parity checks against upstream implementations |
 | `docs/` | regime definitions, data preparation, reproducibility, the reporting checklist |
