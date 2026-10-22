@@ -1,8 +1,27 @@
 # population-graph-information-regimes
 
 This repository accompanies **"Information regimes in population-graph neuroimaging: cohort
-context and implementation-dependent evaluation sensitivity"** (submission version RC4,
-2026-09-30).
+context and implementation-dependent evaluation sensitivity"**.
+
+Manuscript versions and dates: the first public release (tag `v1.0.0`, commit `b83ad83`)
+accompanied manuscript **RC4 (2026-09-30)**. The revision prepared here supports manuscript
+**RC5.18 (2026-10-21)** and is released as **v1.0.1 (2026-10-22)**. The manuscript was submitted to bioRxiv on
+**2 October 2026** and first posted on **8 October 2026** (DOI
+`10.64898/2026.10.02.756253`, CC-BY 4.0).
+
+| manuscript | date | this repository |
+|---|---|---|
+| RC4 | 2026-09-30 | tag `v1.0.0`, commit `b83ad83` |
+| RC5.18 | 2026-10-21 | release `v1.0.1` (2026-10-22) |
+
+The software result layer is unchanged between `v1.0.0` and this revision: no model, split,
+training rule or frozen value has changed. What this revision adds is the frozen split
+registry, the Table 1 source and generator, and documentation.
+
+Version history: `v1.0.0` is archived at the version DOI `10.5281/zenodo.23104123`; the
+concept DOI `10.5281/zenodo.23104122` resolves to the latest version. The DOI for `v1.0.1`
+is minted when that release is archived and is added to `CITATION.cff` after the archive
+exists.
 
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
@@ -30,13 +49,20 @@ extension runs and carries no per-subject record; its interaction is carried by 
 record and is cross-checked, not recomputed. Full campaign reruns are available through
 the controlled runner scripts documented below.
 
+The figure generators (`figures/Fig2_primary_interaction.py`,
+`figures/FS2_loso_sensitivity.py`) read the same frozen inputs and also run from a public
+checkout: with no `paperA-control/` present they verify against `frozen_results/SHA256SUMS`
+instead. Running them rewrites the figure PDF/SVG/PNG in place and prints a validation
+summary. `figures/verify_concept_figures.py` additionally needs the manuscript sources and
+skips itself in a public checkout.
+
 ## Layout
 
 | path | content |
 |---|---|
 | `audit/` | the controlled-evaluation library: regime protocols (P0/P1), graph construction, preprocessing scope, training and checkpoint-selection rules |
 | `scripts/` | named entry points: split generation, controlled runners, aggregation, bootstrap inference, table/figure generation |
-| `configs/` | the locked campaign definition (`configs/study/locked_campaign_v1.yaml`) |
+| `configs/` | the historical campaign configuration (`configs/study/locked_campaign_v1.yaml`). It describes an earlier campaign (R1-C vs R2-Q, split seeds 1024/2024/2025), **not** the P0/P1 contrast reported in the manuscript; see `docs/CONFIG_MAPPING.md` |
 | `frozen_results/` | the frozen record the paper reports from: `S1_FREEZE.yaml`, the per-subject out-of-fold files (`oof/`), the derived table sources (`derived/`), per-cell results, checksums |
 | `tests/` | protocol and adapter tests, including the parity checks against upstream implementations |
 | `docs/` | regime definitions, data preparation, reproducibility, the reporting checklist |
@@ -58,6 +84,9 @@ Code: GPL-3.0 (the controlled implementations wrap GPL-3.0 upstreams; see
 ## Citation
 
 Repository: <https://github.com/mindloop-lab/population-graph-information-regimes>
+
+Paper preprint: <https://doi.org/10.64898/2026.10.02.756253> (bioRxiv; submitted 2 October 2026,
+first posted 8 October 2026, CC-BY 4.0).
 
 Software archive (v1.0.0): DOI `10.5281/zenodo.23104123` — see `CITATION.cff`. Cite both the
 software record and the paper.

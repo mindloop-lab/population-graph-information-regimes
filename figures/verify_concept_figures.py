@@ -24,6 +24,11 @@ BASE = pathlib.Path(__file__).resolve().parents[1]
 FIG = BASE / "figures"
 PKG = BASE / "PaperA_Figure_Design_Package"
 
+if not (BASE / "manuscript_s1").is_dir():
+    print("SKIP: verify_concept_figures is an internal consistency check; the manuscript sources "
+          "(manuscript_s1/) are not part of the public checkout.")
+    raise SystemExit(2)
+
 fails: list[str] = []
 warns: list[str] = []
 n = 0

@@ -24,6 +24,14 @@ target-site context) and P5/LOSO (leave-one-site-out) live on this axis. They be
 separate, earlier campaign with its own estimands and are **not** merged with the primary
 P0/P1 evidence.
 
+## Site-omission sensitivity analysis (reported next to the primary estimand)
+
+The paper's site-omission range is computed from the **fixed** out-of-fold predictions of the
+reported runs: the query subjects of one site are removed at a time and the AUC is recomputed on
+the remaining queries. **No model is refitted and no checkpoint is reselected**, so this is a
+sensitivity range over the evaluation set, not a training-time site hold-out. It is distinct from
+P5/LOSO on axis (b), where the omitted site is also removed from training.
+
 ## Primary estimand
 
 The implementation-by-training-context interaction, per split s:

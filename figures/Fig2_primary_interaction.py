@@ -95,7 +95,7 @@ def canonical_texts(node, acc=None):
 primary = rows("cross_split_primary.csv")
 seeds = rows("seed_level_interactions.csv")
 cond = rows("condition_level_auc.csv")
-sens = rows("sensitivity_summary.csv")
+sens = FROZEN.sensitivity  # derived from S1_FREEZE.yaml when the CSV is not shipped
 
 # ---- validation battery, before anything is drawn -------------------------------
 fails: list[str] = []
@@ -122,7 +122,7 @@ for r in cond:
 present_traj = sorted(k for k, v in traj.items() if set(v) == {"P0", "P1"})
 unsupported = [r for r in cond if r["availability"] != "present"]
 check(len(present_traj) == 4,
-      "four condition-level paired trajectories present (2 architectures x 2 splits)",
+      "four condition-level paired trajectories present (2 implementations x 2 splits)",
       ", ".join(f"{s}/{m}" for s, m in present_traj))
 check(len([r for r in cond if r["availability"] == "present"]) == 8,
       "eight condition-level points drawn (no 666 value invented)",
@@ -181,6 +181,7 @@ plt.rcParams.update({
 STAGE_LABEL = {"666": "666 (prior audit)", "1024": "1024 (M4.5-S1)", "2024": "2024 (M4.5-S1)"}
 ARCH_STYLE = {"EV-GCN": dict(color=CB["blue"], ls="-", marker="o", mfc="white", mew=1.1),
               "Parisot": dict(color=CB["orange"], ls="--", marker="s", mfc="white", mew=1.1)}
+LABEL_BBOX = dict(boxstyle="round,pad=0.14", fc="white", ec="none", alpha=0.92)
 
 # Sized to the manuscript's own text width (elsarticle[preprint,12pt]: \textwidth = 390 pt
 # = 5.42 in), so the figure is placed 1:1 and every label prints at its nominal point size.
@@ -200,24 +201,24 @@ for y, r in zip(ys, primary):
     axA.plot([pt], [y], marker="D", ms=5.2, color="black", zorder=4)
     # Interval bounds are deliberately not printed here: they are in the results table and
     # printing them would push the small type below the printable minimum on a 137 mm page.
-    axA.text(pt, y + 0.22, "ΔΔAUC " + r["delta_delta_auc"], fontsize=7.0, ha="center",
-             color="black")
+    axA.annotate("ΔΔAUC " + r["delta_delta_auc"], (pt, y), textcoords="offset points",
+                 xytext=(8, 6), ha="left", va="bottom", fontsize=7.0,
+                 color="black", bbox=LABEL_BBOX, zorder=5)
 axA.axvline(0, color="0.25", lw=1.0, zorder=1)
 axA.set_yticks(ys, [STAGE_LABEL[r["split"]] for r in primary])
 axA.set_ylabel("Preselected outer split")
 axA.set_ylim(-0.62, len(primary) + 0.62)
 axA.set_xlim(-0.005, 0.196)
-axA.set_xlabel("Architecture × training-context interaction, ΔΔAUC")
+axA.set_xlabel("Implementation × training-context interaction, ΔΔAUC")
 axA.set_title("A  Cross-split interaction (no pooled estimate)", loc="left", pad=6)
 axA.legend(handles=[
     Line2D([], [], color=CB["blue"], lw=2.2, label="Subject-bootstrap 95% interval"),
     Line2D([], [], color=CB["green"], lw=1.1, label="Site-cluster 95% interval"),
     Line2D([], [], color="black", marker="D", ls="none", ms=5, label="ΔΔAUC point estimate"),
-], loc="upper left", frameon=False, handlelength=1.8, borderaxespad=0.2)
-axA.annotate("Positive values indicate a more negative P0→P1 AUC change for EV-GCN than for "
-             "Parisot-GCN.\nSplits are replication units and are not pooled.",
-             xy=(0, -0.30), xycoords="axes fraction", fontsize=7.0, color=CB["grey"],
-             va="top", ha="left", annotation_clip=False)
+], loc="upper left", bbox_to_anchor=(0.034057, 1.0569717), frameon=False,
+               handlelength=1.8, borderaxespad=0.0)
+# Directional interpretation and the no-pooling statement are carried by the caption;
+# keeping prose off the plotting area prevents collisions at final journal width.
 
 # ---------------------------------------------------------------- Panel B
 # A2 review: the earlier single panel encoded the split twice (colour and marker fill) and the
@@ -228,7 +229,18 @@ axA.annotate("Positive values indicate a more negative P0→P1 AUC change for EV
 # grayscale. The two facets share one y-range, so the splits stay comparable by eye.
 sub_b = gs[1].subgridspec(1, 2, wspace=0.32)
 axBs = [fig.add_subplot(sub_b[0, i]) for i in range(2)]
+# The RC3 artwork pass shifted both facets left in the vector editor (1024: -21 pt,
+# 2024: -9 pt) to open up the gutter between them; the script carries the same shift so
+# code and artwork cannot drift apart. Data, ticks, labels and anchored artists ride along.
+for axB, facet_dx_pt in zip(axBs, (-21.0, -9.0)):
+    b = axB.get_position()
+    axB.set_position([b.x0 + facet_dx_pt / (fig.get_figwidth() * 72.0), b.y0,
+                      b.width, b.height])
 xr = {"P0": 0.0, "P1": 1.0}
+# Display-only horizontal dodge: the x-axis is categorical (P0/P1), so a very small,
+# symmetric offset keeps near-identical implementation values visible without changing
+# any reported AUC or implying an additional quantitative x-dimension.
+ARCH_X_OFFSET = {"EV-GCN": -0.025, "Parisot": +0.025}
 fit_splits = ["1024", "2024"]
 arch_col = {"EV-GCN": CB["blue"], "Parisot": CB["orange"]}
 # Panel C still colours by split, so the split palette stays defined here.
@@ -242,33 +254,48 @@ ylim_b = (min(b_vals) - b_pad, max(b_vals) + b_pad)
 for axB, split in zip(axBs, fit_splits):
     for arch in ("EV-GCN", "Parisot"):
         v = traj[(split, arch)]
-        xs = [xr["P0"], xr["P1"]]
+        xs = [xr["P0"] + ARCH_X_OFFSET[arch], xr["P1"] + ARCH_X_OFFSET[arch]]
         fs = [float(v["P0"]["ensemble_auc"]), float(v["P1"]["ensemble_auc"])]
         axB.plot(xs, fs, ls=linestyle[arch], color=arch_col[arch], lw=1.4,
                  marker=markers[arch], ms=4.6, mew=1.1, mfc="white", zorder=3)
+        # Offsets carry the vector-editor label pass: each value label is nudged clear of
+        # the dodged markers, the connecting lines and its neighbour label. Values are in
+        # offset points from the (dodged) marker; y-values of the markers never move.
+        label_offsets = {
+            "1024": {("EV-GCN", "P0"): (12.0329, -9.5571, "right", "center"),
+                     ("EV-GCN", "P1"): (-8.1088, 10.1601, "left", "center"),
+                     ("Parisot", "P0"): (-18.7176, 10.0, "left", "center"),
+                     ("Parisot", "P1"): (-11.5663, -9.2742, "left", "center")},
+            "2024": {("EV-GCN", "P0"): (10.6867, -12.6576, "right", "center"),
+                     ("EV-GCN", "P1"): (-9.7551, 9.7172, "left", "center"),
+                     ("Parisot", "P0"): (-20.0638, 10.0, "left", "center"),
+                     ("Parisot", "P1"): (-13.2125, -10.6030, "left", "center")},
+        }
         for x, fv, key in zip(xs, fs, ("P0", "P1")):
+            dx, dy, ha, va = label_offsets[split][(arch, key)]
             axB.annotate(v[key]["ensemble_auc"], (x, fv), textcoords="offset points",
-                         xytext=(0, 9 if arch == "EV-GCN" else -15),
-                         ha="center", fontsize=6.8, color=CB["grey"])
-    axB.set_xticks([0.0, 1.0], ["P0\ntrain-time context", "P1\nquery-only context"])
-    axB.set_xlim(-0.30, 1.30)
+                         xytext=(dx, dy), ha=ha, va=va, fontsize=6.6, color=CB["grey"],
+                         bbox=LABEL_BBOX, zorder=4)
+    axB.set_xticks([0.0, 1.0], ["P0", "P1"])
+    axB.set_xlim(-0.38, 1.38)
     axB.set_ylim(*ylim_b)
     # Titles must fit a half-width facet. The earlier descriptive title ("Condition-level AUC
     # response, split 1024") ran into the right facet's title — measured as a 13 pt overlap of
     # "1024" and "split" on one baseline. The description belongs to the caption, which already
     # states what panel B shows.
-    axB.set_title(f"B  split {split}" if split == fit_splits[0] else f"split {split}",
+    axB.set_title(f"B split {split}" if split == fit_splits[0] else f"split {split}",
                   loc="left", fontsize=8.0, pad=4)
 axBs[0].set_ylabel("Ensemble AUC")
 h = [Line2D([], [], color=arch_col[a], ls=linestyle[a], marker=markers[a], ms=4.6,
             mfc="white", lw=1.4, label=a) for a in ("EV-GCN", "Parisot")]
-axBs[0].legend(handles=h, loc="upper center", bbox_to_anchor=(1.06, -0.16), frameon=False,
-               ncol=2, handlelength=1.9, columnspacing=2.0, labelspacing=0.55,
-               borderaxespad=0.0)
-axBs[0].annotate("Split 666: condition-level AUC unavailable in frozen source; interaction "
-                 "retained in Panel A.",
-                 xy=(0, -0.46), xycoords="axes fraction", fontsize=7.0, color=CB["grey"],
-                 va="top", ha="left", annotation_clip=False)
+axBs[0].legend(handles=h, loc="upper center", bbox_to_anchor=(1.121626, -0.1579865),
+               frameon=False, ncol=2, handlelength=1.9, columnspacing=2.0,
+               labelspacing=0.55, borderaxespad=0.0)
+axBs[0].annotate("P0 → P1: training-context intervention",
+                 xy=(1.109298, -0.3169725), xycoords="axes fraction", fontsize=7.0,
+                 color=CB["grey"], va="top", ha="center", annotation_clip=False)
+# Split 666's missing condition-level AUC is explained in the caption; no prose is
+# placed between panels B and C.
 
 # ---------------------------------------------------------------- Panel C
 axC = fig.add_subplot(gs[2])
@@ -282,27 +309,39 @@ for r in single:
     xv = float(r["interaction"])
     axC.plot([xv], [yv], marker="o", ms=3.0, mfc="white", mew=1.0,
              color=split_col.get(r["split"], CB["green"]), ls="none", zorder=3)
-    axC.annotate(r["interaction"], (xv, yv), textcoords="offset points", xytext=(4.5, 0),
-                 ha="left", va="center", fontsize=6.5, color=CB["grey"])
+    # Single-seed points are intentionally unlabeled in the main figure; exact values
+    # remain available in the supplementary table, while this panel communicates direction
+    # and consistency without turning the plot into a numeric table.
+ens_offsets = {"666": (10, 6, "left", "bottom"),
+               "1024": (12, -2, "left", "top"),
+               "2024": (10, 6, "left", "bottom")}
 for r in ens:
     yv = yband[r["split"]] + ENS_DY
     xv = float(r["interaction"])
     axC.plot([xv], [yv], marker="D", ms=6.0, color=split_col.get(r["split"], CB["green"]),
              ls="none", zorder=4)
-    axC.annotate(r["interaction"], (xv, yv), textcoords="offset points", xytext=(0, 5.5),
-                 ha="center", va="bottom", fontsize=6.8, color="black")
+    dx, dy, ha, va = ens_offsets[r["split"]]
+    axC.annotate(r["interaction"], (xv, yv), textcoords="offset points", xytext=(dx, dy),
+                 ha=ha, va=va, fontsize=6.8, color="black", bbox=LABEL_BBOX, zorder=5)
 axC.axvline(0, color="0.25", lw=1.0, zorder=1)
 axC.set_yticks([2, 1, 0], [STAGE_LABEL[s] for s in ("666", "1024", "2024")])
 axC.set_ylabel("Preselected outer split")
 axC.set_ylim(-0.62, 2.92)
 axC.set_xlim(-0.012, 0.19)
 axC.set_xlabel("Single-training-seed interaction, ΔΔAUC")
-axC.set_title("C  Seed consistency (per-split; no averaging across splits)", loc="left", pad=6)
+axC.set_title("C Seed consistency (per-split; no averaging across splits)",
+              loc="left", pad=12, x=-0.0531293)
 axC.legend(handles=[
     Line2D([], [], marker="o", ls="none", mfc="white", mew=1.0, ms=3.6, color="0.35",
            label="single seed (11 / 22 / 33)"),
     Line2D([], [], marker="D", ls="none", ms=6, color="0.35", label="three-seed ensemble"),
-], loc="upper left", frameon=False, handlelength=1.6, borderaxespad=0.2)
+], loc="upper left", bbox_to_anchor=(0.0681229, 1.0542631), frameon=False,
+           handlelength=1.6, borderaxespad=0.0)
+
+check(abs(ARCH_X_OFFSET["EV-GCN"] + ARCH_X_OFFSET["Parisot"]) < 1e-12
+      and max(abs(v) for v in ARCH_X_OFFSET.values()) <= 0.04,
+      "panel B display dodge is symmetric and small",
+      f"EV-GCN {ARCH_X_OFFSET['EV-GCN']:+.3f}, Parisot {ARCH_X_OFFSET['Parisot']:+.3f}")
 
 # ---- forbidden vocabulary, checked on everything that ends up on the canvas --------
 texts = []
@@ -324,10 +363,23 @@ for t in texts:
 check(not hits, "no annotation asserts " + " / ".join(FORBIDDEN),
       "; ".join(sorted(set(hits))) or f"clean; {len(negated)} occurrence(s) inside an explicit denial")
 
-fig.savefig(FIGDIR / "Fig2_primary_interaction.pdf")
-fig.savefig(FIGDIR / "Fig2_primary_interaction.svg")
-fig.savefig(FIGDIR / "Fig2_primary_interaction.png", dpi=600)
-fig.savefig("/tmp/Fig2_single_column_check.png", dpi=200)
+# The pinned RC3 artwork page is 375.8696 x 446.915594 pt with panel A's axes patch at
+# (82.336328, 14.278594) pt; the tight crop would now come out ~9.7 pt narrower because the
+# facet shift moved the rightmost ink left. Cropping to an explicit box - panel A pinned at
+# its published coordinates - reproduces the published page 1:1 in every format and stays
+# byte-stable against future label nudges.
+from matplotlib.transforms import Bbox  # noqa: E402
+_posA = axA.get_position()
+_figw_pt, _figh_pt = fig.get_figwidth() * 72.0, fig.get_figheight() * 72.0
+_canvas_w_in, _canvas_h_in = 375.8696 / 72.0, 446.915594 / 72.0
+SAVE_BB = Bbox.from_bounds((_posA.x0 * _figw_pt - 82.336328) / 72.0,
+                            14.278594 / 72.0 - _canvas_h_in
+                            + (_posA.y0 + _posA.height) * _figh_pt / 72.0,
+                            _canvas_w_in, _canvas_h_in)
+fig.savefig(FIGDIR / "Fig2_primary_interaction.pdf", bbox_inches=SAVE_BB)
+fig.savefig(FIGDIR / "Fig2_primary_interaction.svg", bbox_inches=SAVE_BB)
+fig.savefig(FIGDIR / "Fig2_primary_interaction.png", dpi=600, bbox_inches=SAVE_BB)
+fig.savefig("/tmp/Fig2_single_column_check.png", dpi=200, bbox_inches=SAVE_BB)
 plt.close(fig)
 
 # ---- read the rendered vector output back and verify what is actually on the page ----
@@ -355,8 +407,8 @@ check(not absent, "every numeric string rendered on the page is a frozen value o
       f"{len(tick_labels)} of them axis ticks"
       + ("" if not absent else f" — unaccounted: {absent}"))
 joined = " | ".join(svg_strings)
-check(joined.count("EV-GCN") >= 2 and joined.count("Parisot") >= 2,
-      "both architectures are named on the page in more than one place",
+check(joined.count("EV-GCN") >= 1 and joined.count("Parisot") >= 1,
+      "both implementations are named in the figure legend",
       f"EV-GCN x{joined.count('EV-GCN')}, Parisot x{joined.count('Parisot')}")
 check(all(t in joined for t in ("666 (prior audit)", "1024 (M4.5-S1)", "2024 (M4.5-S1)")),
       "the three stage labels are printed on the page")
@@ -388,10 +440,13 @@ for _y, _items in _rows.items():
 check(not _overlaps, "no two words overlap on the rendered page",
       f"{len(_rows)} baselines checked" + ("" if not _overlaps else f" — {_overlaps[:3]}"))
 
-unlabelled = [r["interaction"] for r in single + ens if r["interaction"] not in joined]
-check(not unlabelled, "every seed and ensemble value is printed as a label on the page",
-      f"{len(single) + len(ens)} labels expected"
-      + ("" if not unlabelled else f" — missing: {unlabelled}"))
+unlabelled_ensemble = [r["interaction"] for r in ens if r["interaction"] not in joined]
+check(not unlabelled_ensemble, "every ensemble value is printed as a label on the page",
+      f"{len(ens)} ensemble labels expected"
+      + ("" if not unlabelled_ensemble else f" — missing: {unlabelled_ensemble}"))
+check(all(r["interaction"] not in joined for r in single),
+      "single-seed values are not printed as labels in the main figure",
+      f"{len(single)} single-seed points shown without numeric labels")
 
 if fails:
     die("validation failed: " + "; ".join(fails))
@@ -420,8 +475,10 @@ manifest = {
     "generated": "2026-09-27",
     "numeric_authority": "S1_FREEZE.yaml -> H3 derived CSVs; no value read from prose, none typed by hand",
     "inputs": inputs,
-    "recorded_by": {"PROJECT_STATE.yaml": {k: v[0] for k, v in recorded.items()},
-                    "SOURCE_REGISTRY.yaml": {k: v[1] for k, v in recorded.items()}},
+    "recorded_by": (
+        {"PROJECT_STATE.yaml": {k: v[0] for k, v in recorded.items()},
+         "SOURCE_REGISTRY.yaml": {k: v[1] for k, v in recorded.items()}}
+        if recorded else {"frozen_results/SHA256SUMS": dict(inputs)}),
     "script": {"path": "figures/Fig2_primary_interaction.py",
                "sha256": sha(Path(__file__).resolve())},
     "command": "python3 figures/Fig2_primary_interaction.py  (run from the repository root; pinned artifacts were rendered from this source)",
@@ -433,7 +490,7 @@ manifest = {
                        "present": 4, "points": 8, "unsupported": "split 666, NOT_PRESENT_IN_FROZEN_SOURCE",
                        "note": "the prompt text says 'exactly 6 condition-level paired trajectories' "
                                "and then describes four trajectories / 8 points; the frozen source "
-                               "contains four present trajectories (2 architectures x 2 splits) and "
+                               "contains four present trajectories (2 implementations x 2 splits) and "
                                "four unsupported 666 rows, so four is drawn and six is the count of "
                                "trajectory slots that would exist if 666 carried condition-level values"},
                    "strings_rendered_as_numbers": len(render_numbers),
@@ -454,7 +511,8 @@ manifest = {
                                      "so nothing encodes it); within a facet the implementation is "
                                      "carried by colour, with line style and marker shape redundant "
                                      "for grayscale; subject vs site interval by weight and "
-                                     "vertical offset",
+                                     "vertical offset; panel-B implementation markers use a symmetric "
+                                     "±0.025 categorical x-dodge only for visibility, with y-values unchanged",
               "no_3d": True, "no_gradients": True},
 }
 (FIGDIR / "Fig2_primary_interaction_manifest.yaml").write_text(
