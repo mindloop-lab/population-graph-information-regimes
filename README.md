@@ -18,10 +18,9 @@ The software result layer is unchanged between `v1.0.0` and this revision: no mo
 training rule or frozen value has changed. What this revision adds is the frozen split
 registry, the Table 1 source and generator, and documentation.
 
-Version history: `v1.0.0` is archived at the version DOI `10.5281/zenodo.23104123`; the
-concept DOI `10.5281/zenodo.23104122` resolves to the latest version. The DOI for `v1.0.1`
-is minted when that release is archived and is added to `CITATION.cff` after the archive
-exists.
+Version history: `v1.0.0` is archived at the version DOI `10.5281/zenodo.23104123` and `v1.0.1`
+at `10.5281/zenodo.23554740`; the concept DOI `10.5281/zenodo.23104122` resolves to the latest
+version.
 
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
@@ -88,6 +87,7 @@ Repository: <https://github.com/mindloop-lab/population-graph-information-regime
 Paper preprint: <https://doi.org/10.64898/2026.10.02.756253> (bioRxiv; submitted 2 October 2026,
 first posted 8 October 2026, CC-BY 4.0).
 
-Software archive (v1.0.0): DOI `10.5281/zenodo.23104123` — see `CITATION.cff`. Cite both the
+Software archive (v1.0.1): DOI `10.5281/zenodo.23554740` — see `CITATION.cff`. The earlier
+archive is `v1.0.0` at `10.5281/zenodo.23104123`. Cite both the
 software record and the paper.
 
