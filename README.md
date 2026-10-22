@@ -56,7 +56,7 @@ the controlled runner scripts documented below.
 
 The figure generators (`figures/Fig2_primary_interaction.py`,
 `figures/FS2_loso_sensitivity.py`) read the same frozen inputs and also run from a public
-checkout: with no `paperA-control/` present they verify against `frozen_results/SHA256SUMS`
+checkout: when the private control plane is absent they verify against `frozen_results/SHA256SUMS`
 instead. Running them rewrites the figure PDF/SVG/PNG in place and prints a validation
 summary. `figures/verify_concept_figures.py` additionally needs the manuscript sources and
 skips itself in a public checkout.

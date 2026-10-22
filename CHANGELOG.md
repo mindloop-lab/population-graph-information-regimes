@@ -51,7 +51,7 @@ recomputed, and nothing in `frozen_results/` changed.
 ### Reproducibility
 
 - The figure generators now run from a public checkout. `figures/_frozen_inputs.py` uses the
-  private control plane (`paperA-control/`, double-pinned) when it is present and otherwise
+  private control plane (double-pinned) when it is present and otherwise
   verifies the same inputs against `frozen_results/SHA256SUMS`; the governance checks that need
   the control plane stay internal and are not imitated publicly.
 - `figures/Fig2_primary_interaction.py` and `figures/FS2_loso_sensitivity.py` regenerate
