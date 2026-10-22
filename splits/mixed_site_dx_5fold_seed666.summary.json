@@ -1,6 +1,6 @@
 {
   "algorithm": "within-site-within-diagnosis shuffled round-robin",
-  "manifest": "/mnt/ssd2/qing/data/curated/abide1_canonical_variants/magp_abide1_v1_legacy_matched/metadata/cohort_manifest.csv",
+  "manifest": "cohort_manifest.csv (ABIDE-I canonical variant magp_abide1_v1_legacy_matched; not redistributed)",
   "manifest_sha256": "77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d",
   "n_records": 4355,
   "registry_sha256": "fa689961a888b79b60141892149d61193828f3867652b9f88eb78feb8ee464b3",
@@ -379,5 +379,6 @@
     ]
   },
   "status": "PASS",
-  "validation_algorithm": "within-site-within-diagnosis proportional sample"
+  "validation_algorithm": "within-site-within-diagnosis proportional sample",
+  "manifest_source_note": "server-side location removed from the public tree; identity is pinned by manifest_sha256"
 }

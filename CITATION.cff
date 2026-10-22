@@ -48,17 +48,17 @@ authors:
       Cyberspace Big Data Intelligent Security, Ministry of Education, and Key
       Laboratory of Big Data Intelligent Computing, Chongqing University of Posts
       and Telecommunications
-version: 1.0.1
+version: 1.1.0
 date-released: "2026-10-22"
 license: GPL-3.0
 repository-code: "https://github.com/mindloop-lab/population-graph-information-regimes"
 identifiers:
-  - description: Zenodo version DOI (v1.0.1)
-    type: doi
-    value: "10.5281/zenodo.23554740"
   - description: Zenodo concept DOI (resolves to the latest version)
     type: doi
     value: "10.5281/zenodo.23104122"
+# The v1.1.0 version DOI is minted at publication and is intentionally absent until it exists.
+# Previous version DOIs (version history only, not this release): v1.0.0 10.5281/zenodo.23104123,
+# v1.0.1 10.5281/zenodo.23554740.
 preferred-citation:
   type: article
   title: >-
@@ -128,3 +128,6 @@ abstract: >-
   training-time cohort-visibility intervention on three preselected outer
   splits, with the frozen results, per-subject out-of-fold registry and
   deterministic reproduction scripts. Data are not redistributed.
+  Version 1.1.0 adds the negative-control study (60 per-cell records and a
+  strict invariance gate), Reporting Checklist v2, and the regenerated
+  Figure 1 and Figure 2 used by the manuscript revision candidate.
