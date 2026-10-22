@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.1 (unreleased; prepared 2026-10-19)
+## 1.0.1 (2026-10-22)
 
 Documentation, display and metadata only. No result, range, split, prediction or checkpoint was
 recomputed, and nothing in `frozen_results/` changed.

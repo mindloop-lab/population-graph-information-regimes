@@ -5,14 +5,14 @@ context and implementation-dependent evaluation sensitivity"**.
 
 Manuscript versions and dates: the first public release (tag `v1.0.0`, commit `b83ad83`)
 accompanied manuscript **RC4 (2026-09-30)**. The revision prepared here supports manuscript
-**RC5.18 (2026-10-21)** and is not yet released. The manuscript was submitted to bioRxiv on
+**RC5.18 (2026-10-21)** and is released as **v1.0.1 (2026-10-22)**. The manuscript was submitted to bioRxiv on
 **2 October 2026** and first posted on **8 October 2026** (DOI
 `10.64898/2026.10.02.756253`, CC-BY 4.0).
 
 | manuscript | date | this repository |
 |---|---|---|
 | RC4 | 2026-09-30 | tag `v1.0.0`, commit `b83ad83` |
-| RC5.18 | 2026-10-21 | this revision; release pending author approval |
+| RC5.18 | 2026-10-21 | release `v1.0.1` (2026-10-22) |
 
 The software result layer is unchanged between `v1.0.0` and this revision: no model, split,
 training rule or frozen value has changed. What this revision adds is the frozen split

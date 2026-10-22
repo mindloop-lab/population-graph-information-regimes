@@ -1,6 +1,6 @@
 # Release preparation — v1.0.1 (2026-10-22)
 
-Status: **prepared, not released**. No tag, no GitHub Release, no Zenodo deposit.
+Status: **released as `v1.0.1` on 2026-10-22**; the version DOI is added after Zenodo archives the tag.
 
 ## 1. What this revision contains
 
