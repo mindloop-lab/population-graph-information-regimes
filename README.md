@@ -18,6 +18,11 @@ The software result layer is unchanged between `v1.0.0` and this revision: no mo
 training rule or frozen value has changed. What this revision adds is the frozen split
 registry, the Table 1 source and generator, and documentation.
 
+Version history: `v1.0.0` is archived at the version DOI `10.5281/zenodo.23104123`; the
+concept DOI `10.5281/zenodo.23104122` resolves to the latest version. The DOI for `v1.0.1`
+is minted when that release is archived and is added to `CITATION.cff` after the archive
+exists.
+
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
 weighted graph) on ABIDE-I (871 subjects, 20 sites). Within each implementation, subjects,

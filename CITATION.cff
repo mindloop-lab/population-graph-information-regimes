@@ -48,14 +48,14 @@ authors:
       Cyberspace Big Data Intelligent Security, Ministry of Education, and Key
       Laboratory of Big Data Intelligent Computing, Chongqing University of Posts
       and Telecommunications
-version: 1.0.0
-date-released: "2026-10-02"
+version: 1.0.1
+date-released: "2026-10-23"
 license: GPL-3.0
 repository-code: "https://github.com/mindloop-lab/population-graph-information-regimes"
 identifiers:
-  - description: Zenodo version DOI for v1.0.0
+  - description: Zenodo concept DOI (resolves to the latest version)
     type: doi
-    value: "10.5281/zenodo.23104123"
+    value: "10.5281/zenodo.23104122"
 preferred-citation:
   type: article
   title: >-

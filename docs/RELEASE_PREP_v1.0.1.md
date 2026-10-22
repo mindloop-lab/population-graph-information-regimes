@@ -21,16 +21,32 @@ Checked against the public API on 2026-10-22:
 | deposit file | `population-graph-information-regimes-1.0.0.tar.gz` |
 | related identifier | `https://github.com/mindloop-lab/population-graph-information-regimes` (`isIdenticalTo`) |
 
-The deposit file name and the GitHub `isIdenticalTo` link indicate that the record was created
-by the **GitHub–Zenodo integration** (a repository archive of the `v1.0.0` release), not by a
-manual upload.
+The deposit file name and the GitHub `isIdenticalTo` link are **supporting evidence** that the
+record was created by the GitHub–Zenodo integration; they do not by themselves prove the source,
+and they say nothing about whether the connection is still enabled today.
 
-**Decision: use one path only — the GitHub integration.** Publishing a `v1.0.1` tag and
-Release lets Zenodo mint the next version in the same concept chain. A manual deposit would
-create a second, parallel record and split the DOI history.
+Checks performed on 2026-10-22 from this host:
 
-Consequence to plan for: with the integration, the version DOI is minted *at release time*, so
-`CITATION.cff` inside the tagged tree cannot already contain it. The sequence is therefore:
+| check | result |
+|---|---|
+| `.zenodo.json` in the repository | **absent** (contents API returns 404), so Zenodo would read `CITATION.cff` |
+| repository webhooks (to see an integration hook) | **not verifiable** — the GitHub token here lacks `admin:repo_hook`, the hooks API returns 404 |
+| Zenodo integration status for the repository | **not verifiable without the Zenodo account UI** |
+
+**Project decision (not a general rule): this project uses the GitHub–Zenodo integration and
+will not create a separate manual deposit.** A manual deposit would be a second record for the
+same software in this project's history, which we choose to avoid; we are not claiming that a
+manual deposit always produces a duplicate.
+
+Before tagging, confirm in the Zenodo account that the repository connection is still enabled,
+and read the existing release list. If the connection is not enabled, the fallback is a manual
+"new version" in the *same* concept record (never a new deposition), and the archive hash and
+version DOI are recorded here before the manuscript is updated.
+
+Consequence to plan for: with the integration, the version DOI is minted *at release time*.
+`CITATION.cff` therefore now carries `version: 1.0.1` and the planned release date, keeps the
+concept DOI, and **omits any version DOI** — the `v1.0.0` version DOI stays in the README's
+history note. The sequence is:
 
 1. merge the accepted tree into `main` and tag `v1.0.1` (Release notes = `CHANGELOG.md` §1.0.1);
 2. let Zenodo archive that tag; record the new version DOI;
@@ -38,21 +54,21 @@ Consequence to plan for: with the integration, the version DOI is minted *at rel
    `CITATION.cff`, `README.md` and the manuscript's availability paragraph — no new tag;
 4. verify the Zenodo download, then update the manuscript files and submit bioRxiv v2 / MedIA.
 
-This keeps the concept chain intact and avoids duplicate records. It does mean the archived
-tree's `CITATION.cff` names `1.0.0` as the released version; step 3 is what corrects the
-metadata layer, and the manuscript must cite the version DOI created in step 2.
+This keeps the concept chain intact. The archived tree's `CITATION.cff` names `1.0.1` and the
+planned release date but carries no version DOI; step 3 adds it after the archive exists (no
+new tag), and the manuscript must cite the version DOI created in step 2.
 
 ## 3. Files to update at release (not before)
 
 | file | change |
 |---|---|
-| `CITATION.cff` | `version: 1.0.1`, `date-released`, identifiers → new version DOI |
-| `README.md` | version/date table: RC5.18 → the released tag; link the new DOI |
-| `CHANGELOG.md` | move the 1.0.1 section from "unreleased" to dated |
-| manuscript §6 + supplement + cover letter | availability paragraph: archived version and DOI |
+| `CITATION.cff` | **done**: `version: 1.0.1`, planned `date-released`, concept DOI only. Remaining: add the version DOI after the archive exists |
+| `README.md` | **done**: version table and history note. Remaining: replace the planned date with the actual one after release |
+| `CHANGELOG.md` | move the 1.0.1 section from "unreleased" to dated, after the tag |
+| manuscript §6 + supplement + cover letter | availability paragraph: archived version and DOI (after release) |
 
-Nothing above has been changed in this commit: the current tree still says `1.0.0`, which is
-the truth until the release exists.
+Nothing claims that `v1.0.1` is published: the tree carries the planned date and no version DOI,
+which is the truth until the archive exists.
 
 ## 4. Shared-scope record (unsigned)
 
