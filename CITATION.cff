@@ -53,10 +53,12 @@ date-released: "2026-10-22"
 license: GPL-3.0
 repository-code: "https://github.com/mindloop-lab/population-graph-information-regimes"
 identifiers:
+  - description: Zenodo version DOI (v1.1.0)
+    type: doi
+    value: "10.5281/zenodo.23609463"
   - description: Zenodo concept DOI (resolves to the latest version)
     type: doi
     value: "10.5281/zenodo.23104122"
-# The v1.1.0 version DOI is minted at publication and is intentionally absent until it exists.
 # Previous version DOIs (version history only, not this release): v1.0.0 10.5281/zenodo.23104123,
 # v1.0.1 10.5281/zenodo.23554740.
 preferred-citation:

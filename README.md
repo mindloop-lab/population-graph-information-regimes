@@ -25,8 +25,7 @@ revision candidate. No primary result, split or frozen value is altered by the i
 
 Version history: `v1.0.0` is archived at the version DOI `10.5281/zenodo.23104123` and `v1.0.1`
 at `10.5281/zenodo.23554740`; the concept DOI `10.5281/zenodo.23104122` resolves to the latest
-version. The `v1.1.0` version DOI is minted at publication and is deliberately not written here
-before it exists.
+version. `v1.1.0` is archived at the version DOI `10.5281/zenodo.23609463`.
 
 It reproduces the controlled **P0/P1 evaluation-regime experiments** for two
 population-graph implementations (EV-GCN, learned/adaptive graph; Parisot-GCN, static
